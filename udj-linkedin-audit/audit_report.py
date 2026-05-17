@@ -1096,7 +1096,7 @@ def build_html_report(data_dir: Path) -> str:
     table.kv { max-width: 560px; }
     a { color: var(--accent); }
     code { background: #243044; padding: 2px 6px; border-radius: 4px; }
-    p.warn { color: #f0c674; }
+    .warn { color: #f0c674; }
     """
 
     gen = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
