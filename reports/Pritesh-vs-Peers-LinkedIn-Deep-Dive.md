@@ -57,7 +57,6 @@
 
 | Metric | Peers | Pritesh |
 |---|---|---|
-|  | Peers | Pritesh |
 | Median reactions | 300.5 | 43.0 |
 | Median comments | 31.0 | 2.0 |
 | Median reposts | 10.0 | 0.0 |
@@ -96,14 +95,15 @@
 
 | Tag | Peer posts | % of peers | PJ posts | % of PJ |
 |---|---|---|---|---|
-| Tag | Peer posts | % of peers | PJ posts | % of PJ |
-| ai_ml | 0 | 0.0% | 0 | 0.0% |
-| creator_business | 0 | 0.0% | 0 | 0.0% |
-| jobs_interviews | 0 | 0.0% | 0 | 0.0% |
-| visa_immigration | 0 | 0.0% | 0 | 0.0% |
-| data_analytics | 0 | 0.0% | 0 | 0.0% |
-| career_story | 0 | 0.0% | 0 | 0.0% |
-| money_salary | 0 | 0.0% | 0 | 0.0% |
+| AI / ML signals | 672 | 56.8% | 50 | 18.6% |
+| Creator / monetization / links | 667 | 56.3% | 224 | 83.3% |
+| Jobs / interviews / resume | 428 | 36.1% | 178 | 66.2% |
+| Visa / immigration | 60 | 5.1% | 136 | 50.6% |
+| Data / analytics roles | 341 | 28.8% | 10 | 3.7% |
+| Career story / milestones | 222 | 18.8% | 49 | 18.2% |
+| Money / salary / TC | 94 | 7.9% | 60 | 22.3% |
+
+*Rows are not mutually exclusive: one post can match multiple tags (e.g., AI + jobs). Percentages can sum to more than 100% within a column.*
 
 ---
 
@@ -111,7 +111,6 @@
 
 | Brand | Peer posts (count) | Peers % | PJ posts (count) | PJ % |
 |---|---|---|---|---|
-| Brand | Peer posts (count) | Peers % | PJ posts (count) | PJ % |
 | Google | 114 | 9.6% of peer posts | 15 | 5.6% of PJ posts |
 | Amazon / AWS | 88 | 7.4% of peer posts | 11 | 4.1% of PJ posts |
 | OpenAI / ChatGPT | 65 | 5.5% of peer posts | 11 | 4.1% of PJ posts |
