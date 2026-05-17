@@ -48,7 +48,7 @@
 
 | Cohort | Posts captured in window |
 |---|---|
-| Six peers combined | 1184 |
+| Seven peers combined | 1184 |
 | Pritesh / UDJ | 269 |
 
 ---
@@ -71,7 +71,7 @@
 
 | Cohort | Posts in window | p10 reactions | p50 (median) | p90 | max |
 |--------|-----------------|---------------|--------------|-----|-----|
-| Six peers (combined) | 1,184 | ~84 | 300 | 1,201 | 8,445 |
+| Seven peers (combined) | 1,184 | ~84 | 300 | 1,201 | 8,445 |
 | Pritesh | 269 | ~9 | 43 | 278 | 4,425 |
 
 **Share of “strong” posts (reactions ≥ 500):** peers **~32%** of window posts vs Pritesh **~3.7%**.  
@@ -181,7 +181,7 @@ The DSA patterns post shows **comments can decouple from reactions** when the as
 
 ---
 
-## 10. Peer-by-peer playbook notes (six peers)
+## 10. Peer-by-peer playbook notes (seven peers)
 
 ### Aishwarya Srinivasan (`AIshwaraya.md`)
 - **Window posts:** 324
