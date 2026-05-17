@@ -1,0 +1,421 @@
+{
+  "window": {
+    "start": "2025-11-17",
+    "end": "2026-05-17",
+    "anchor_note": "Window uses 2025-11-17 through 2026-05-17 (six months to latest export date in repo)."
+  },
+  "meta": {
+    "AIshwaraya.md": {
+      "file": "AIshwaraya.md",
+      "exported": "2026-05-17",
+      "page": "https://www.linkedin.com/in/aishwarya-srinivasan",
+      "posts_parsed": 500
+    },
+    "Amney.md": {
+      "file": "Amney.md",
+      "exported": "2026-05-17",
+      "page": "https://www.linkedin.com/in/amney-mounir",
+      "posts_parsed": 500
+    },
+    "Ruchi Bhatia.md": {
+      "file": "Ruchi Bhatia.md",
+      "exported": "2026-05-17",
+      "page": "https://www.linkedin.com/in/ruchi798",
+      "posts_parsed": 298
+    },
+    "Sohan Sethi.md": {
+      "file": "Sohan Sethi.md",
+      "exported": "2026-05-17",
+      "page": "https://www.linkedin.com/in/sohansethi",
+      "posts_parsed": 474
+    },
+    "Sundas Khalid.md": {
+      "file": "Sundas Khalid.md",
+      "exported": "2026-05-17",
+      "page": "https://www.linkedin.com/in/sundaskhalid",
+      "posts_parsed": 264
+    },
+    "Venkata.md": {
+      "file": "Venkata.md",
+      "exported": "2026-05-17",
+      "page": "https://www.linkedin.com/in/saibysani18",
+      "posts_parsed": 500
+    },
+    "Vishaka.md": {
+      "file": "Vishaka.md",
+      "exported": "2026-05-17",
+      "page": "https://www.linkedin.com/in/vsadhwani",
+      "posts_parsed": 500
+    },
+    "Yudi J.md": {
+      "file": "Yudi J.md",
+      "exported": "2026-04-14",
+      "page": "https://www.linkedin.com/in/priteshjagani",
+      "posts_parsed": 500
+    }
+  },
+  "counts": {
+    "peer_posts_total": 3036,
+    "peer_posts_in_window": 1184,
+    "pritesh_posts_total": 500,
+    "pritesh_posts_in_window": 269
+  },
+  "aggregate_peers_window": {
+    "n": 1184,
+    "median_reactions": 300.5,
+    "median_comments": 31.0,
+    "median_reposts": 10.0,
+    "median_score": 1964.5,
+    "mean_reactions": 527.4797297297297,
+    "mean_comments": 44.642736486486484,
+    "mean_reposts": 33.102195945945944,
+    "median_body_chars": 1182.0,
+    "mean_body_chars": 1265.6891891891892,
+    "comments_per_1k_rx": 84.63403230558367,
+    "reposts_per_1k_rx": 62.755389601239955,
+    "media_mix": {
+      "image": 990,
+      "video": 109,
+      "document": 63,
+      "article": 22
+    },
+    "topic_posts": {
+      "ai_ml": 672,
+      "creator_business": 667,
+      "jobs_interviews": 428,
+      "data_analytics": 341,
+      "career_story": 222,
+      "money_salary": 94,
+      "visa_immigration": 60
+    },
+    "brand_mentions_posts": {
+      "Google": 114,
+      "Amazon / AWS": 88,
+      "OpenAI": 65,
+      "Meta": 44,
+      "Claude": 42,
+      "NVIDIA": 40,
+      "Microsoft": 38,
+      "Manifest Law": 37,
+      "Fireworks AI": 28,
+      "Replit": 20,
+      "Anthropic": 16,
+      "Perplexity": 6
+    }
+  },
+  "pritesh_window": {
+    "n": 269,
+    "median_reactions": 43.0,
+    "median_comments": 2.0,
+    "median_reposts": 0.0,
+    "median_score": 250.0,
+    "mean_reactions": 131.56133828996283,
+    "mean_comments": 8.635687732342008,
+    "mean_reposts": 2.899628252788104,
+    "median_body_chars": 1244.0,
+    "mean_body_chars": 1502.910780669145,
+    "comments_per_1k_rx": 65.64001130262787,
+    "reposts_per_1k_rx": 22.04012432890647,
+    "media_mix": {
+      "video": 135,
+      "image": 131,
+      "document": 3
+    },
+    "topic_posts": {
+      "creator_business": 224,
+      "jobs_interviews": 178,
+      "visa_immigration": 136,
+      "money_salary": 60,
+      "ai_ml": 50,
+      "career_story": 49,
+      "data_analytics": 10
+    },
+    "brand_mentions_posts": {
+      "Manifest Law": 74,
+      "Google": 15,
+      "Amazon / AWS": 11,
+      "OpenAI": 11,
+      "Meta": 4,
+      "Perplexity": 3,
+      "Microsoft": 3,
+      "Replit": 2,
+      "Claude": 2,
+      "Fireworks AI": 1
+    }
+  },
+  "per_peer_window": {
+    "AIshwaraya.md": {
+      "n": 324,
+      "median_reactions": 199.5,
+      "median_comments": 25.0,
+      "median_reposts": 5.0,
+      "median_score": 1306.5,
+      "mean_reactions": 345.679012345679,
+      "mean_comments": 30.20679012345679,
+      "mean_reposts": 12.364197530864198,
+      "median_body_chars": 1233.5,
+      "mean_body_chars": 1278.358024691358,
+      "comments_per_1k_rx": 87.38392857142857,
+      "reposts_per_1k_rx": 35.767857142857146,
+      "media_mix": {
+        "image": 232,
+        "video": 56,
+        "document": 20,
+        "article": 16
+      },
+      "topic_posts": {
+        "ai_ml": 274,
+        "creator_business": 179,
+        "career_story": 52,
+        "jobs_interviews": 31,
+        "money_salary": 14,
+        "data_analytics": 12,
+        "visa_immigration": 5
+      },
+      "brand_mentions_posts": {
+        "OpenAI": 31,
+        "Fireworks AI": 28,
+        "Google": 27,
+        "Amazon / AWS": 14,
+        "NVIDIA": 12,
+        "Microsoft": 11,
+        "Anthropic": 11,
+        "Claude": 10,
+        "Meta": 9,
+        "Manifest Law": 5,
+        "Perplexity": 4
+      }
+    },
+    "Amney.md": {
+      "n": 275,
+      "median_reactions": 453.0,
+      "median_comments": 43.0,
+      "median_reposts": 29.0,
+      "median_score": 2739.0,
+      "mean_reactions": 689.2945454545454,
+      "mean_comments": 48.265454545454546,
+      "mean_reposts": 53.22909090909091,
+      "median_body_chars": 749.0,
+      "mean_body_chars": 795.7527272727273,
+      "comments_per_1k_rx": 70.02152398235879,
+      "reposts_per_1k_rx": 77.22256219797843,
+      "media_mix": {
+        "image": 253,
+        "document": 17,
+        "video": 5
+      },
+      "topic_posts": {
+        "data_analytics": 147,
+        "creator_business": 131,
+        "jobs_interviews": 125,
+        "ai_ml": 102,
+        "career_story": 40,
+        "money_salary": 16,
+        "visa_immigration": 4
+      },
+      "brand_mentions_posts": {
+        "Meta": 22,
+        "OpenAI": 10,
+        "Google": 5,
+        "Claude": 3,
+        "Microsoft": 3,
+        "Replit": 2,
+        "Amazon / AWS": 2,
+        "Manifest Law": 2
+      }
+    },
+    "Ruchi Bhatia.md": {
+      "n": 47,
+      "median_reactions": 599.0,
+      "median_comments": 10.0,
+      "median_reposts": 1.0,
+      "median_score": 3089.0,
+      "mean_reactions": 872.063829787234,
+      "mean_comments": 15.02127659574468,
+      "mean_reposts": 2.021276595744681,
+      "median_body_chars": 1337.0,
+      "mean_body_chars": 1345.0212765957447,
+      "comments_per_1k_rx": 17.224973772171666,
+      "reposts_per_1k_rx": 2.3178080854905216,
+      "media_mix": {
+        "image": 44,
+        "video": 3
+      },
+      "topic_posts": {
+        "ai_ml": 39,
+        "creator_business": 21,
+        "jobs_interviews": 15,
+        "career_story": 12,
+        "money_salary": 3,
+        "data_analytics": 3,
+        "visa_immigration": 2
+      },
+      "brand_mentions_posts": {
+        "Amazon / AWS": 12,
+        "Google": 6,
+        "NVIDIA": 5,
+        "OpenAI": 4,
+        "Claude": 4,
+        "Anthropic": 3,
+        "Meta": 2,
+        "Microsoft": 1,
+        "Perplexity": 1
+      }
+    },
+    "Sohan Sethi.md": {
+      "n": 163,
+      "median_reactions": 144.0,
+      "median_comments": 21.0,
+      "median_reposts": 8.0,
+      "median_score": 963.0,
+      "mean_reactions": 219.17177914110428,
+      "mean_comments": 26.650306748466257,
+      "mean_reposts": 22.153374233128833,
+      "median_body_chars": 2133.0,
+      "mean_body_chars": 2074.7852760736196,
+      "comments_per_1k_rx": 121.59552134359693,
+      "reposts_per_1k_rx": 101.0776766969909,
+      "media_mix": {
+        "image": 157,
+        "document": 3,
+        "video": 3
+      },
+      "topic_posts": {
+        "creator_business": 151,
+        "jobs_interviews": 129,
+        "data_analytics": 79,
+        "ai_ml": 52,
+        "career_story": 42,
+        "visa_immigration": 41,
+        "money_salary": 35
+      },
+      "brand_mentions_posts": {
+        "Google": 42,
+        "Amazon / AWS": 27,
+        "Manifest Law": 27,
+        "Microsoft": 12,
+        "Claude": 10,
+        "OpenAI": 5,
+        "Meta": 4,
+        "NVIDIA": 3,
+        "Replit": 2
+      }
+    },
+    "Sundas Khalid.md": {
+      "n": 103,
+      "median_reactions": 275.0,
+      "median_comments": 26.0,
+      "median_reposts": 4.0,
+      "median_score": 1757.0,
+      "mean_reactions": 443.20388349514565,
+      "mean_comments": 38.1747572815534,
+      "mean_reposts": 7.533980582524272,
+      "median_body_chars": 794.0,
+      "mean_body_chars": 907.5339805825242,
+      "comments_per_1k_rx": 86.13362541073384,
+      "reposts_per_1k_rx": 16.998904709748082,
+      "media_mix": {
+        "image": 67,
+        "video": 24,
+        "document": 8,
+        "article": 4
+      },
+      "topic_posts": {
+        "ai_ml": 57,
+        "creator_business": 45,
+        "jobs_interviews": 25,
+        "career_story": 22,
+        "data_analytics": 17,
+        "money_salary": 7
+      },
+      "brand_mentions_posts": {
+        "Google": 11,
+        "Claude": 10,
+        "OpenAI": 6,
+        "Amazon / AWS": 4,
+        "Replit": 4,
+        "Meta": 1,
+        "Anthropic": 1
+      }
+    },
+    "Venkata.md": {
+      "n": 119,
+      "median_reactions": 283.0,
+      "median_comments": 57.0,
+      "median_reposts": 8.0,
+      "median_score": 2200.0,
+      "mean_reactions": 459.02521008403363,
+      "mean_comments": 102.61344537815125,
+      "mean_reposts": 37.075630252100844,
+      "median_body_chars": 1379.0,
+      "mean_body_chars": 1372.5126050420167,
+      "comments_per_1k_rx": 223.5464264792033,
+      "reposts_per_1k_rx": 80.77035735207967,
+      "media_mix": {
+        "image": 98,
+        "video": 10,
+        "document": 10,
+        "article": 1
+      },
+      "topic_posts": {
+        "creator_business": 88,
+        "jobs_interviews": 77,
+        "data_analytics": 72,
+        "ai_ml": 62,
+        "career_story": 24,
+        "money_salary": 13,
+        "visa_immigration": 8
+      },
+      "brand_mentions_posts": {
+        "Google": 12,
+        "Replit": 10,
+        "Amazon / AWS": 7,
+        "OpenAI": 7,
+        "Microsoft": 6,
+        "Meta": 5,
+        "Claude": 5,
+        "Manifest Law": 3,
+        "NVIDIA": 2,
+        "Anthropic": 1,
+        "Perplexity": 1
+      }
+    },
+    "Vishaka.md": {
+      "n": 153,
+      "median_reactions": 806.0,
+      "median_comments": 39.0,
+      "median_reposts": 51.0,
+      "median_score": 4620.0,
+      "mean_reactions": 954.2091503267974,
+      "mean_comments": 56.23529411764706,
+      "mean_reposts": 76.17647058823529,
+      "median_body_chars": 1488.0,
+      "mean_body_chars": 1355.1960784313726,
+      "comments_per_1k_rx": 58.93392879159418,
+      "reposts_per_1k_rx": 79.83204789237914,
+      "media_mix": {
+        "image": 139,
+        "video": 8,
+        "document": 5,
+        "article": 1
+      },
+      "topic_posts": {
+        "ai_ml": 86,
+        "creator_business": 52,
+        "career_story": 30,
+        "jobs_interviews": 26,
+        "data_analytics": 11,
+        "money_salary": 6
+      },
+      "brand_mentions_posts": {
+        "Amazon / AWS": 22,
+        "NVIDIA": 18,
+        "Google": 11,
+        "Microsoft": 5,
+        "OpenAI": 2,
+        "Replit": 2,
+        "Meta": 1
+      }
+    }
+  }
+}
