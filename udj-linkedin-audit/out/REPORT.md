@@ -1,15 +1,15 @@
 # Pritesh Jagani (Yudi J / UDJ) — multi-creator LinkedIn audit
 
 This report is **machine-generated** from bulk caption exports so every creator is scored with the **same rubric**. 
-**Time window:** `2025-11-17`–`2026-05-17` (inclusive), anchored to export dates in May 2026.
+**Time window:** last **90** days — `2026-02-16` through `2026-05-17` (inclusive by post date).
 
 ---
 
 ## 1. Executive read (non-repetitive)
 
-- **Volume in window:** 1184 peer posts vs **269** Pritesh posts.
-- **Typical post strength:** peer median **300** reactions / **31** comments vs Pritesh **43** / **2** — Pritesh has elite spikes but a thinner mid-tail.
-- **Shareability:** peers **62.8** reposts per 1k reactions vs Pritesh **22.0**.
+- **Volume in window:** 548 peer posts vs **72** Pritesh posts.
+- **Typical post strength:** peer median **280** reactions / **32** comments vs Pritesh **72** / **3** — Pritesh has elite spikes but a thinner mid-tail.
+- **Shareability:** peers **69.2** reposts per 1k reactions vs Pritesh **7.4**.
 - **Lane:** peers collectively skew **AI / data / cloud-native vocabulary** in distinctive terms (see §4); Pritesh skews **visa + jobseeker** language in raw topic heuristics — use §4.8 for his own distinctive terms.
 - **Six-post plan (§7)** deliberately assigns **six different creators** as the primary pattern owner so the sprint is not anchored on a single peer.
 
@@ -19,14 +19,14 @@ This report is **machine-generated** from bulk caption exports so every creator 
 
 | Creator | Profile URL | Posts in window | Export date |
 |---|---|---|---|
-| Aishwarya Srinivasan | https://www.linkedin.com/in/aishwarya-srinivasan | 324 | 2026-05-17 |
-| Amney Mounir | https://www.linkedin.com/in/amney-mounir | 275 | 2026-05-17 |
-| Ruchi Bhatia | https://www.linkedin.com/in/ruchi798 | 47 | 2026-05-17 |
-| Sohan Sethi | https://www.linkedin.com/in/sohansethi | 163 | 2026-05-17 |
-| Sundas Khalid | https://www.linkedin.com/in/sundaskhalid | 103 | 2026-05-17 |
-| Venkata Sai | https://www.linkedin.com/in/saibysani18 | 119 | 2026-05-17 |
-| Vishaka Sadhwani | https://www.linkedin.com/in/vsadhwani | 153 | 2026-05-17 |
-| Pritesh Jagani (Yudi J / UDJ) | https://www.linkedin.com/in/priteshjagani | 269 | 2026-04-14 |
+| Aishwarya Srinivasan | https://www.linkedin.com/in/aishwarya-srinivasan | 114 | 2026-05-17 |
+| Amney Mounir | https://www.linkedin.com/in/amney-mounir | 191 | 2026-05-17 |
+| Ruchi Bhatia | https://www.linkedin.com/in/ruchi798 | 29 | 2026-05-17 |
+| Sohan Sethi | https://www.linkedin.com/in/sohansethi | 98 | 2026-05-17 |
+| Sundas Khalid | https://www.linkedin.com/in/sundaskhalid | 66 | 2026-05-17 |
+| Venkata Sai | https://www.linkedin.com/in/saibysani18 | 0 | 2026-05-17 |
+| Vishaka Sadhwani | https://www.linkedin.com/in/vsadhwani | 50 | 2026-05-17 |
+| Pritesh Jagani (Yudi J / UDJ) | https://www.linkedin.com/in/priteshjagani | 72 | 2026-04-14 |
 
 ---
 
@@ -34,8 +34,8 @@ This report is **machine-generated** from bulk caption exports so every creator 
 
 | Cohort | n | Med rx | Med cm | Rp/1k rx | Cm/1k rx | Media mix |
 |---|---|---|---|---|---|---|
-| Peers (7 combined) | 1184 | 300 | 31 | 62.8 | 84.6 | image 990, video 109, document 63, article 22 |
-| Pritesh | 269 | 43 | 2 | 22.0 | 65.6 | video 135, image 131, document 3 |
+| Peers (7 combined) | 548 | 280 | 32 | 69.2 | 80.8 | image 467, video 47, document 27, article 7 |
+| Pritesh | 72 | 72 | 3 | 7.4 | 41.3 | image 43, video 29 |
 
 ---
 
@@ -44,24 +44,24 @@ This report is **machine-generated** from bulk caption exports so every creator 
 ### 4.1 Aishwarya Srinivasan (`AIshwaraya.md`)
 
 - **Profile:** https://www.linkedin.com/in/aishwarya-srinivasan
-- **Medians:** 200 reactions · 25 comments · 5 reposts · score 1306
-- **Means:** 345.7 rx · 30.2 cm · reposts/1k rx **35.8**
-- **Heuristic topics (post counts, non-exclusive):** ai_ml **274**, creator_business **179**, career_story **52**, jobs_interviews **31**, money_salary **14**, data_analytics **12**, visa_immigration **5**
-- **Heuristic brand mentions:** OpenAI **31**, Fireworks AI **28**, Google **27**, Amazon / AWS **14**, NVIDIA **12**, Microsoft **11**, Anthropic **11**, Claude **10**, Meta **9**, Manifest Law **5**
-- **Vocabulary more concentrated here than other peers (lift × token):** **fireworks** (2164502.16), **arvind** (2007083.83), **narayanamurthy** (1180637.54), **academy** (826446.28), **starcloud** (787091.7), **instruction** (629673.36), **natalie** (590318.77), **summarization** (550964.19), **retrieved** (550964.19), **aishwarya** (61.6), **retrieval** (54.21), **seats** (44.35), **srinivasan** (41.07), **langchain** (41.07)
+- **Medians:** 177 reactions · 24 comments · 4 reposts · score 1143
+- **Means:** 280.5 rx · 26.7 cm · reposts/1k rx **38.3**
+- **Heuristic topics (post counts, non-exclusive):** ai_ml **92**, creator_business **57**, career_story **13**, jobs_interviews **8**, money_salary **4**, visa_immigration **4**, data_analytics **3**
+- **Heuristic brand mentions:** OpenAI **9**, Anthropic **9**, Google **7**, Claude **7**, Fireworks AI **5**, NVIDIA **4**, Manifest Law **4**, Microsoft **3**, Meta **3**, Perplexity **1**
+- **Vocabulary more concentrated here than other peers (lift × token):** **arvind** (3071253.07), **retrieval** (64.84), **fine** (38.14), **agentic** (15.26), **examples** (14.62), **evaluation** (13.87), **tuning** (11.02), **generation** (10.68), **video** (10.3), **latency** (9.54), **intelligence** (8.9), **reasoning** (8.72), **agents** (7.22), **generative** (6.54)
 
 **Five highest-comment posts (deduped URLs):**
 
-1. [Nov 18, 2025 — 269 comments, 2787 rx](https://www.linkedin.com/feed/update/urn:li:activity:7389112259437846529)
-   - I'm very excited to share that Fireworks AI has raised $250M in Series C funding co-led by Lightspeed and Index Ventures, and participation from Sequoia Capital and Evantic Capital, bringing up valuation to $4 billion. In total, we raised $327M from prior rounds led by Benchmarkand Sequoia Capital, …
-2. [Nov 18, 2025 — 169 comments, 1939 rx](https://www.linkedin.com/feed/update/urn:li:activity:7387303489556783104)
-   - It still feels a little unreal, I just crossed 1 million across all platforms where I create and share⭐️ When I started posting on LinkedIn, it wasn’t about becoming a creator. It was about curiosity - connecting with other ML researchers, sharing what I was learning, and building a community that l…
-3. [Jan 17, 2026 — 139 comments, 354 rx](https://www.linkedin.com/feed/update/urn:li:activity:7407591285148000256)
-   - I have a little game for you! I will play three voices in this video. Two are AI. One is actually me. Can you guess which one is my real voice? Comment 1, 2, or 3 👇 I’ve trained a professional voice clone on ElevenLabs that I now use for many of my AI explainer videos and voiceovers. It’s trained on…
-4. [Feb 16, 2026 — 138 comments, 1293 rx](https://www.linkedin.com/feed/update/urn:li:activity:7423430710243348480)
+1. [Feb 16, 2026 — 138 comments, 1293 rx](https://www.linkedin.com/feed/update/urn:li:activity:7423430710243348480)
    - ⚠️ 🚨 Swati Jha decided to copy my content word by word! I recently discovered, when someone tagged me in her post calling out that she had copied my content. No attribution. No original thinking. Just a direct lift, passed off as their own work. AI is not something you cosplay into through content f…
-5. [Nov 18, 2025 — 117 comments, 543 rx](https://www.linkedin.com/feed/update/urn:li:activity:7390944358792839168)
-   - If you’re preparing for your next AI engineering interview, there’s one topic that separates beginners from builders: Context Engineering. It’s not about writing better prompts, it’s about building better thinking pipelines. LLMs can’t reason in isolation. They depend on engineered context – retriev…
+2. [Feb 16, 2026 — 81 comments, 948 rx](https://www.linkedin.com/feed/update/urn:li:activity:7419919903358488576)
+   - hashtag #WaPoPartner The Washington Post recently launched Ask The Post, and it’s a good example of how AI should be used. Ask The Post is an AI chatbot that lets users ask questions and receive answers generated exclusively from The Post’s reporting. It doesn't invent information, it summarizes wha…
+3. [Feb 16, 2026 — 81 comments, 948 rx](https://www.linkedin.com/feed/update/urn:li:activity:7419785421968097280)
+   - hashtag #WaPoPartner The Washington Post recently launched Ask The Post, and it’s a good example of how AI should be used. Ask The Post is an AI chatbot that lets users ask questions and receive answers generated exclusively from The Post’s reporting. It doesn't invent information, it summarizes wha…
+4. [Feb 16, 2026 — 61 comments, 1537 rx](https://www.linkedin.com/feed/update/urn:li:activity:7425247804123463682)
+   - Introducing DreamZero: we trained a robot foundation model that can do zero-shot, open-world prompting for new verbs, nouns, and environments. DreamZero is our first "World Action Model" (WAM): if the world model backbone can "dream" the right future in video pixels, then the robot can execute well …
+5. [Feb 16, 2026 — 58 comments, 443 rx](https://www.linkedin.com/feed/update/urn:li:activity:7427169029884256257)
+   - If you’re worried that AI might impact your role, this is a practical way to think about it. In this video, I share a simple checklist to calculate the risk score of your role and, more importantly, what to do about it. How to spot which parts of your work are at risk. How to use AI tools to automat…
 
 **One-line positioning (from corpus, not flattery):** AI + builder milestones with public proof; strongest heuristic bucket **ai_ml**.
 
@@ -70,11 +70,11 @@ This report is **machine-generated** from bulk caption exports so every creator 
 ### 4.2 Amney Mounir (`Amney.md`)
 
 - **Profile:** https://www.linkedin.com/in/amney-mounir
-- **Medians:** 453 reactions · 43 comments · 29 reposts · score 2739
-- **Means:** 689.3 rx · 48.3 cm · reposts/1k rx **77.2**
-- **Heuristic topics (post counts, non-exclusive):** data_analytics **147**, creator_business **131**, jobs_interviews **125**, ai_ml **102**, career_story **40**, money_salary **16**, visa_immigration **4**
-- **Heuristic brand mentions:** Meta **22**, OpenAI **10**, Google **5**, Claude **3**, Microsoft **3**, Replit **2**, Amazon / AWS **2**, Manifest Law **2**
-- **Vocabulary more concentrated here than other peers (lift × token):** **everyday** (27.61), **behavioral** (24.5), **intro** (22.46), **insightful** (19.46), **metric** (17.78), **definitely** (16.33), **influence** (16.04), **junior** (14.14), **round** (13.61), **count** (13.61), **recommend** (13.1), **daily** (12.34), **able** (10.89), **main** (10.29)
+- **Medians:** 416 reactions · 48 comments · 29 reposts · score 2722
+- **Means:** 644.2 rx · 51.7 cm · reposts/1k rx **83.4**
+- **Heuristic topics (post counts, non-exclusive):** data_analytics **92**, creator_business **90**, ai_ml **80**, jobs_interviews **76**, career_story **26**, money_salary **11**, visa_immigration **4**
+- **Heuristic brand mentions:** Meta **20**, OpenAI **8**, Claude **3**, Google **3**, Microsoft **3**, Amazon / AWS **2**, Manifest Law **2**
+- **Vocabulary more concentrated here than other peers (lift × token):** **round** (70.67), **everyday** (43.43), **intro** (30.92), **count** (20.61), **behavioral** (17.67), **metric** (16.78), **definitely** (15.9), **luma** (14.72), **insightful** (14.55), **recommend** (14.23), **meta** (12.62), **main** (12.62), **follow** (10.2), **solve** (9.32)
 
 **Five highest-comment posts (deduped URLs):**
 
@@ -96,24 +96,24 @@ This report is **machine-generated** from bulk caption exports so every creator 
 ### 4.3 Ruchi Bhatia (`Ruchi Bhatia.md`)
 
 - **Profile:** https://www.linkedin.com/in/ruchi798
-- **Medians:** 599 reactions · 10 comments · 1 reposts · score 3089
-- **Means:** 872.1 rx · 15.0 cm · reposts/1k rx **2.3**
-- **Heuristic topics (post counts, non-exclusive):** ai_ml **39**, creator_business **21**, jobs_interviews **15**, career_story **12**, money_salary **3**, data_analytics **3**, visa_immigration **2**
-- **Heuristic brand mentions:** Amazon / AWS **12**, Google **6**, NVIDIA **5**, OpenAI **4**, Claude **4**, Anthropic **3**, Meta **2**, Microsoft **1**, Perplexity **1**
-- **Vocabulary more concentrated here than other peers (lift × token):** **domain** (13.55), **hashtag** (9.57), **teams** (4.04), **career** (3.32), **decisions** (3.29), **content** (2.53), **roles** (2.51), **something** (2.42), **product** (2.25), **people** (2.08), **scale** (2.07), **building** (1.73), **model** (1.62), **models** (1.55)
+- **Medians:** 368 reactions · 7 comments · 1 reposts · score 1940
+- **Means:** 518.6 rx · 11.2 cm · reposts/1k rx **2.4**
+- **Heuristic topics (post counts, non-exclusive):** ai_ml **24**, creator_business **15**, jobs_interviews **11**, career_story **5**, money_salary **3**, visa_immigration **2**, data_analytics **2**
+- **Heuristic brand mentions:** Amazon / AWS **6**, NVIDIA **4**, Google **4**, OpenAI **4**, Claude **4**, Anthropic **3**, Meta **2**, Microsoft **1**, Perplexity **1**
+- **Vocabulary more concentrated here than other peers (lift × token):** **domain** (42.66), **hashtag** (8.51), **outputs** (5.05), **newsletter** (4.85), **teams** (4.57), **roles** (3.82), **content** (3.44), **scale** (3.37), **claude** (3.21), **decision** (3.19), **decisions** (3.14), **something** (2.81), **career** (2.78), **answer** (2.58)
 
 **Five highest-comment posts (deduped URLs):**
 
-1. [Nov 18, 2025 — 71 comments, 7423 rx](https://www.linkedin.com/feed/update/urn:li:activity:7389171665210925056)
-   - Two years ago, I presented my data science project to Jensen Huang. I was the youngest triple Kaggle grandmaster. I'd spoken at Google conferences. Today, I work at Amazon Web Services. When I started, I had no roadmap. No mentor. Here's how I would break Into AI in 2025 if I had to start over - > W…
-2. [Dec 18, 2025 — 63 comments, 2830 rx](https://www.linkedin.com/feed/update/urn:li:activity:7398956151024922624)
-   - Everyone’s updating their resume. Almost no one’s learning how to actually talk about their work. Carnegie Mellon University invited me back last week to speak with students about building clarity, confidence, and visibility in tech. Here’s what I shared (and what I wish I heard earlier): 1> Stop hi…
-3. [Apr 17, 2026 — 38 comments, 1259 rx](https://www.linkedin.com/feed/update/urn:li:activity:7444979405732409345)
+1. [Apr 17, 2026 — 38 comments, 1259 rx](https://www.linkedin.com/feed/update/urn:li:activity:7444979405732409345)
    - Passed the AWS Certified Cloud Practitioner exam last week 🥳 If you're trying to break into cloud or tech roles, almost every job now expects at least baseline cloud literacy. This certification helps you check that box. Here’s what actually helped if you're thinking about taking it: Before you star…
-4. [Mar 18, 2026 — 31 comments, 1005 rx](https://www.linkedin.com/feed/update/urn:li:activity:7432658184982626304)
+2. [Mar 18, 2026 — 31 comments, 1005 rx](https://www.linkedin.com/feed/update/urn:li:activity:7432658184982626304)
    - Passed the AWS Certified AI Practitioner exam yesterday 🥳 If you're job hunting in AI/ML, every posting wants cloud experience plus AI knowledge. This addresses both. Here's what actually helped if you're thinking about taking it: > Before you start: Make sure you know AWS basics. Shared responsibil…
-5. [Feb 16, 2026 — 28 comments, 773 rx](https://www.linkedin.com/feed/update/urn:li:activity:7419974728670621697)
+3. [Feb 16, 2026 — 28 comments, 773 rx](https://www.linkedin.com/feed/update/urn:li:activity:7419974728670621697)
    - Grateful to share that my interview was featured in The Kaggle Book (2nd Edition) by Luca Massaron, Bojan Tunguz, Ph.D. and Konrad Banachewicz ✨ Kaggle has been one of the most defining parts of my learning journey. It pushed me to build in public and learn faster by contributing back to the communi…
+4. [May 3, 2026 — 26 comments, 735 rx](https://www.linkedin.com/feed/update/urn:li:activity:7454401468226248704)
+   - Chegg is now the first company to be completely wiped out by AI. I keep coming back to this because it's the clearest case study of what happens when your value proposition is "access to information" in a world where information is free. If the core of what you do is retrieving, summarizing, or orga…
+5. [Feb 16, 2026 — 21 comments, 1443 rx](https://www.linkedin.com/feed/update/urn:li:activity:7422147885821145088)
+   - 6 things I learned in my first 6 months at Amazon Web Services (AWS) ✨ If you’re early in your career or preparing for big tech roles, here’s what I’d pay attention to: 1> Clear thinking is a real skill Being able to structure ideas, explain decisions, and communicate tradeoffs makes your work easie…
 
 **One-line positioning (from corpus, not flattery):** AI + cloud product credibility via institutions and competition math; fewer posts, higher peaks.
 
@@ -122,24 +122,24 @@ This report is **machine-generated** from bulk caption exports so every creator 
 ### 4.4 Sohan Sethi (`Sohan Sethi.md`)
 
 - **Profile:** https://www.linkedin.com/in/sohansethi
-- **Medians:** 144 reactions · 21 comments · 8 reposts · score 963
-- **Means:** 219.2 rx · 26.7 cm · reposts/1k rx **101.1**
-- **Heuristic topics (post counts, non-exclusive):** creator_business **151**, jobs_interviews **129**, data_analytics **79**, ai_ml **52**, career_story **42**, visa_immigration **41**, money_salary **35**
-- **Heuristic brand mentions:** Google **42**, Amazon / AWS **27**, Manifest Law **27**, Microsoft **12**, Claude **10**, OpenAI **5**, Meta **4**, NVIDIA **3**, Replit **2**
-- **Vocabulary more concentrated here than other peers (lift × token):** **datalemur** (2026049.2), **wisedoc** (1254220.94), **mishra** (771828.27), **youtubers** (723589.0), **lawyers** (675349.73), **avalon** (675349.73), **luke** (71.41), **hackerrank** (71.41), **barousse** (71.41), **bansal** (64.92), **ankit** (64.92), **visas** (61.67), **letters** (58.43), **employer** (58.43)
+- **Medians:** 176 reactions · 30 comments · 12 reposts · score 1352
+- **Means:** 274.9 rx · 31.2 cm · reposts/1k rx **111.7**
+- **Heuristic topics (post counts, non-exclusive):** creator_business **91**, jobs_interviews **70**, data_analytics **57**, ai_ml **27**, career_story **24**, visa_immigration **22**, money_salary **20**
+- **Heuristic brand mentions:** Google **23**, Manifest Law **15**, Amazon / AWS **13**, Claude **10**, Microsoft **8**, OpenAI **4**, Meta **2**, NVIDIA **1**
+- **Vocabulary more concentrated here than other peers (lift × token):** **lottery** (2036352.67), **visualization** (1960932.2), **datalemur** (1357568.44), **leetcode** (1282147.97), **indexes** (1282147.97), **candidate** (1282147.97), **wisedoc** (1131307.04), **recruiter** (1055886.57), **freberg** (1055886.57), **filtering** (1055886.57), **columns** (1055886.57), **avalon** (1055886.57), **achievements** (1055886.57), **salary** (37.15)
 
 **Five highest-comment posts (deduped URLs):**
 
-1. [Nov 18, 2025 — 340 comments, 204 rx](https://www.linkedin.com/feed/update/urn:li:activity:7395453678259924992)
-   - After being rejected in the H1-B lottery twice, I've spent the past 6 months researching every legal pathway to work in America as an alternative to the H1-B. Here's what I've found: → 5 visa alternatives most people don't know about → Step-by-step application roadmaps for each path → Resources and …
-2. [Feb 16, 2026 — 128 comments, 170 rx](https://www.linkedin.com/feed/update/urn:li:activity:7420117997316612098)
+1. [Feb 16, 2026 — 128 comments, 170 rx](https://www.linkedin.com/feed/update/urn:li:activity:7420117997316612098)
    - I request you to read this post till the end🚨 I did not get a new job I did not write this post to hype my success I am writing this post to HELP other job seekers in need! Attention hashtag #Jobseekers, if are actively looking for a job, this post is for you: I want to start a Networking Thread whe…
-3. [Apr 19, 2026 — 64 comments, 466 rx](https://www.linkedin.com/feed/update/urn:li:activity:7451272136893038592)
+2. [Apr 19, 2026 — 64 comments, 466 rx](https://www.linkedin.com/feed/update/urn:li:activity:7451272136893038592)
    - Here's the Complete Data Analytics Tools Ecosystem for 2026: (Save this - every tool you need to know in one place) One of the most common questions I get: "Which tools should I actually learn for data analytics?" The honest answer - it depends on the role you are targeting. Here is the full breakdo…
-4. [Apr 17, 2026 — 61 comments, 1290 rx](https://www.linkedin.com/feed/update/urn:li:activity:7444248284681965568)
+3. [Apr 17, 2026 — 61 comments, 1290 rx](https://www.linkedin.com/feed/update/urn:li:activity:7444248284681965568)
    - Here's my Ultimate Types of Data Analysis Cheatsheet: (Save this - every data interview asks about this) Most people think data analysis is one thing. It is not. There are 10 different types and knowing which one to use for which business problem is what separates a junior analyst from a senior one.…
-5. [Apr 17, 2026 — 61 comments, 1290 rx](https://www.linkedin.com/feed/update/urn:li:activity:7443659559229059072)
+4. [Apr 17, 2026 — 61 comments, 1290 rx](https://www.linkedin.com/feed/update/urn:li:activity:7443659559229059072)
    - Here's my Ultimate Types of Data Analysis Cheatsheet: (Save this - every data interview asks about this) Most people think data analysis is one thing. It is not. There are 10 different types and knowing which one to use for which business problem is what separates a junior analyst from a senior one.…
+5. [Apr 17, 2026 — 61 comments, 1174 rx](https://www.linkedin.com/feed/update/urn:li:activity:7449202772123590656)
+   - Here's my Ultimate SQL Query Optimization Cheatsheet: (Save this - slow queries will cost you in production and in interviews) Writing a query that works is the baseline. Writing a query that works fast is the skill. I have seen analysts submit queries that took 45 seconds to load on a dashboard use…
 
 **One-line positioning (from corpus, not flattery):** Data analytics education + cheatsheets; visa posts spike comments occasionally.
 
@@ -148,24 +148,24 @@ This report is **machine-generated** from bulk caption exports so every creator 
 ### 4.5 Sundas Khalid (`Sundas Khalid.md`)
 
 - **Profile:** https://www.linkedin.com/in/sundaskhalid
-- **Medians:** 275 reactions · 26 comments · 4 reposts · score 1757
-- **Means:** 443.2 rx · 38.2 cm · reposts/1k rx **17.0**
-- **Heuristic topics (post counts, non-exclusive):** ai_ml **57**, creator_business **45**, jobs_interviews **25**, career_story **22**, data_analytics **17**, money_salary **7**
-- **Heuristic brand mentions:** Google **11**, Claude **10**, OpenAI **6**, Amazon / AWS **4**, Replit **4**, Meta **1**, Anthropic **1**
-- **Vocabulary more concentrated here than other peers (lift × token):** **sundas** (4307812.81), **khalid** (2741335.42), **seattle** (137.99), **women** (34.27), **vibe** (25.71), **creator** (10.59), **event** (7.72), **person** (7.18), **room** (5.77), **coding** (5.41), **insightful** (4.89), **hashtag** (4.39), **learned** (4.2), **courses** (4.06)
+- **Medians:** 240 reactions · 22 comments · 3 reposts · score 1448
+- **Means:** 365.7 rx · 34.0 cm · reposts/1k rx **13.3**
+- **Heuristic topics (post counts, non-exclusive):** ai_ml **41**, creator_business **37**, data_analytics **14**, career_story **12**, jobs_interviews **11**, money_salary **4**
+- **Heuristic brand mentions:** Claude **9**, OpenAI **6**, Google **4**, Replit **3**, Anthropic **1**
+- **Vocabulary more concentrated here than other peers (lift × token):** **seattle** (4749183.73), **women** (67.33), **creator** (37.21), **vibe** (30.12), **event** (17.94), **science** (9.3), **room** (8.86), **coding** (6.95), **hashtag** (5.06), **person** (4.69), **courses** (4.02), **linkedin** (3.4), **keep** (3.25), **insightful** (2.98)
 
 **Five highest-comment posts (deduped URLs):**
 
 1. [May 3, 2026 — 291 comments, 4239 rx](https://www.linkedin.com/feed/update/urn:li:activity:7454537384936800256)
    - After 6.5 years, I’ve decided to leave Google. Getting into Google was a dream of mine, and it took a lot of hard work and resilience to get there… so leaving it wasn’t an easy decision. I’ve been thinking about it for the last two years. One of my strongest memories at Google will always be my firs…
-2. [Nov 18, 2025 — 154 comments, 354 rx](https://www.linkedin.com/feed/update/urn:li:activity:7387133218417856513)
-   - Meta laying off 600 people in AI org raises 2 questions 👇🏼 1. Has AI innovation plateaued, so the extra brains aren’t needed anymore? 2. Or has it gotten so good that the people who built it just automated themselves out of a job? Which one do you think is actually true? ♻️ repost to keep the conver…
-3. [Mar 18, 2026 — 152 comments, 163 rx](https://www.linkedin.com/feed/update/urn:li:activity:7430272511575015424)
+2. [Mar 18, 2026 — 152 comments, 163 rx](https://www.linkedin.com/feed/update/urn:li:activity:7430272511575015424)
    - I’m this “ “ close moving from ChatGPT to Claude. Which one do you use? Is one better than the other especially for writing, coding and building AI agents. ============================================================
-4. [Feb 16, 2026 — 127 comments, 172 rx](https://www.linkedin.com/feed/update/urn:li:activity:7425561469208969216)
+3. [Feb 16, 2026 — 127 comments, 172 rx](https://www.linkedin.com/feed/update/urn:li:activity:7425561469208969216)
    - How do you post ‘unhinged’ content on LinkedIn 👇🏼 ...without worrying about your coworkers or manager seeing it? Asking for friend 👀 Also who should I follow for funny LinkedIn content? There has to be someone to leanr from. ============================================================
-5. [Feb 16, 2026 — 118 comments, 592 rx](https://www.linkedin.com/feed/update/urn:li:activity:7420488047772774418)
+4. [Feb 16, 2026 — 118 comments, 592 rx](https://www.linkedin.com/feed/update/urn:li:activity:7420488047772774418)
    - I wrote a super complex SQL script in 30 minutes at work using Gemini, and I was genuinely shocked at how far this has come 👇🏼 All I did was give it the table name. It automatically figured out the schema, applied analytic functions, and generated the final query with minimal prompting. Of course, I…
+5. [Feb 16, 2026 — 109 comments, 416 rx](https://www.linkedin.com/feed/update/urn:li:activity:7423024715310678016)
+   - I bought a smart ring to monitor my stress at work 👩🏻‍💻 I know this might be a silly purchase, but it's definitely helping me be more mindful. And I am starting to notice a pattern. Yesterday, I noticed a big spike between 2pm and 3pm and I realized that was time I was stuck on this code that wouldn…
 
 **One-line positioning (from corpus, not flattery):** BigTech + AI tools + lifestyle/career transitions; strong on **newsy hooks** and binary debates.
 
@@ -174,24 +174,12 @@ This report is **machine-generated** from bulk caption exports so every creator 
 ### 4.6 Venkata Sai (`Venkata.md`)
 
 - **Profile:** https://www.linkedin.com/in/saibysani18
-- **Medians:** 283 reactions · 57 comments · 8 reposts · score 2200
-- **Means:** 459.0 rx · 102.6 cm · reposts/1k rx **80.8**
-- **Heuristic topics (post counts, non-exclusive):** creator_business **88**, jobs_interviews **77**, data_analytics **72**, ai_ml **62**, career_story **24**, money_salary **13**, visa_immigration **8**
-- **Heuristic brand mentions:** Google **12**, Replit **10**, Amazon / AWS **7**, OpenAI **7**, Microsoft **6**, Meta **5**, Claude **5**, Manifest Law **3**, NVIDIA **2**, Anthropic **1**
-- **Vocabulary more concentrated here than other peers (lift × token):** **readers** (151.67), **gamma** (16.31), **seekers** (11.45), **replit** (11.27), **science** (9.21), **waiting** (6.08), **newsletter** (5.44), **scientist** (5.23), **solutions** (4.86), **actual** (4.62), **recruiters** (4.58), **zero** (4.55), **ready** (4.13), **share** (3.89)
+- **Medians:** 0 reactions · 0 comments · 0 reposts · score 0
+- **Means:** 0.0 rx · 0.0 cm · reposts/1k rx **0.0**
+- **Heuristic topics (post counts, non-exclusive):** 
 
 **Five highest-comment posts (deduped URLs):**
 
-1. [Dec 18, 2025 — 1778 comments, 1274 rx](https://www.linkedin.com/feed/update/urn:li:activity:7401251284219072513)
-   - I built an AI agent that turns resumes into pitch decks in 30 seconds. And it's already helping job seekers stand out from 200+ applicants. You spend hours perfecting your resume. Send it to dozens of companies. And still get ghosted. Not because you're not qualified. But because you're playing the …
-2. [Dec 18, 2025 — 1460 comments, 1521 rx](https://www.linkedin.com/feed/update/urn:li:activity:7406695204252065792)
-   - I built an AI agent that does your entire job search. And it's already helping job seekers stand out from 200+ applicants. Job hunting is exhausting. You spend hours scrolling LinkedIn, tailoring resumes, and still get ghosted. So I automated the whole process. 𝐇𝐞𝐫𝐞'𝐬 𝐡𝐨𝐰 𝐢𝐭 𝐰𝐨𝐫𝐤𝐬: → 𝐅𝐢𝐥𝐥 𝐚 𝐟𝐨𝐫𝐦: Jo…
-3. [Dec 18, 2025 — 822 comments, 627 rx](https://www.linkedin.com/feed/update/urn:li:activity:7399446880604139520)
-   - Most resumes get rejected before a human sees them. I built an AI tool to fix that in 20 minutes. 𝐓𝐡𝐞 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐢𝐬 𝐛𝐫𝐮𝐭𝐚𝐥: You work on your resume for hours. Submit it. Never hear back. Not because you're unqualified, your resume never reached a human. ATS systems filter out candidates for missing key…
-4. [Nov 18, 2025 — 466 comments, 1575 rx](https://www.linkedin.com/feed/update/urn:li:activity:7391076122584584192)
-   - This is a difficult message for me to write, but I'm reaching out because I'm in a truly desperate situation. A recent accident has left me with severe injuries, multiple fractures in my head, a damaged spinal cord, internal organ damage, and a dislocated leg. I was in the ICU for 22 days, fighting …
-5. [Nov 18, 2025 — 433 comments, 808 rx](https://www.linkedin.com/feed/update/urn:li:activity:7385383144490696704)
-   - Manual ML experimentation is dead. I ran 147 experiments last night while watching Netflix. Zero code. Zero burnout. Here's how 👇 The old way of building ML models is broken. You know the drill: → Spend 3 days on EDA → Test 12 architectures manually → Hyperparameter tune until 2 AM → Feature enginee…
 
 **One-line positioning (from corpus, not flattery):** Product-led posts (agents, resume tools) with extremely high comment gravity on demos.
 
@@ -200,24 +188,24 @@ This report is **machine-generated** from bulk caption exports so every creator 
 ### 4.7 Vishaka Sadhwani (`Vishaka.md`)
 
 - **Profile:** https://www.linkedin.com/in/vsadhwani
-- **Medians:** 806 reactions · 39 comments · 51 reposts · score 4620
-- **Means:** 954.2 rx · 56.2 cm · reposts/1k rx **79.8**
-- **Heuristic topics (post counts, non-exclusive):** ai_ml **86**, creator_business **52**, career_story **30**, jobs_interviews **26**, data_analytics **11**, money_salary **6**
-- **Heuristic brand mentions:** Amazon / AWS **22**, NVIDIA **18**, Google **11**, Microsoft **5**, OpenAI **2**, Replit **2**, Meta **1**
-- **Vocabulary more concentrated here than other peers (lift × token):** **kubernetes** (12793497.89), **terraform** (4665863.94), **containers** (3461770.02), **container** (2408187.84), **ingress** (2107164.36), **gitops** (1580373.27), **microservices** (1505117.4), **provisioning** (1128838.05), **prometheus** (1128838.05), **devops** (324.79), **gateway** (179.96), **runtime** (106.85), **infra** (104.98), **aiops** (101.23)
+- **Medians:** 846 reactions · 37 comments · 50 reposts · score 4936
+- **Means:** 1018.7 rx · 68.9 cm · reposts/1k rx **77.8**
+- **Heuristic topics (post counts, non-exclusive):** ai_ml **31**, creator_business **14**, jobs_interviews **11**, career_story **10**, data_analytics **3**
+- **Heuristic brand mentions:** NVIDIA **8**, Amazon / AWS **7**, Google **6**, Microsoft **5**
+- **Vocabulary more concentrated here than other peers (lift × token):** **kubernetes** (14965378.6), **terraform** (4467277.19), **container** (3797185.62), **containers** (3350457.9), **ingress** (3127094.04), **devops** (550.44), **traffic** (170.56), **docker** (147.3), **cluster** (69.78), **security** (46.52), **storage** (41.35), **workloads** (38.76), **cloud** (30.01), **service** (23.26)
 
 **Five highest-comment posts (deduped URLs):**
 
 1. [Feb 16, 2026 — 1204 comments, 760 rx](https://www.linkedin.com/feed/update/urn:li:activity:7421578486944870400)
    - I just built a free interview prep guide for data analysts and data scientists. And I'm giving it away. Most people preparing for data interviews are: ↳ Scrambling the night before with no real plan ↳ Googling random questions with no structure ↳ Watching 10-hour YouTube playlists, they never finish…
-2. [Nov 18, 2025 — 790 comments, 8445 rx](https://www.linkedin.com/feed/update/urn:li:activity:7387149408485720064)
-   - Super thrilled to share that I’ve joined NVIDIA as a Senior Solutions Architect 💚 Over the past few years, I’ve found myself drawn deeper into the world of AI infrastructure ~ how models scale, deploy, and perform in production. This role felt like the perfect next step to double down on that passio…
-3. [Feb 16, 2026 — 306 comments, 3138 rx](https://www.linkedin.com/feed/update/urn:li:activity:7420512389873393664)
+2. [Feb 16, 2026 — 306 comments, 3138 rx](https://www.linkedin.com/feed/update/urn:li:activity:7420512389873393664)
    - Unpopular opinion: 90% of these 'Ops' are just DevOps with extra steps. We went from: DevOps (2010s) - Automate everything To... 14 variations of the same concept Real ones: DevOps, DevSecOps, DataOps, AIOps, MLOps, FinOps Situational/Specialized: The rest!! What's next - BreathOps? BlinkOps? I'm pe…
-4. [Nov 18, 2025 — 159 comments, 4099 rx](https://www.linkedin.com/feed/update/urn:li:activity:7392240625531891712)
-   - First day at the NVIDIA Headquarters. Finally walked into that massive campus in Santa Clara I’d only seen from the outside whenever I visited California. Four years ago, I unpacked my first box in NYC ~ chasing a dream job. Now I’m unpacking here in the west side ~ ready to absorb a completely new …
-5. [Jan 17, 2026 — 116 comments, 1711 rx](https://www.linkedin.com/feed/update/urn:li:activity:7412169755866034176)
-   - A year ago, I was more afraid of posting on LinkedIn than failing an interview. I started posting around February 2025, and honestly, I was terrified. Terrified of what my colleagues & friends would think. Would they assume I was looking for new opportunities? Would I come across as “too much”? So I…
+3. [Feb 16, 2026 — 90 comments, 1005 rx](https://www.linkedin.com/feed/update/urn:li:activity:7426660373107396608)
+   - Excited to share that I’ve cleared the NVIDIA AI Infrastructure Operations Associate certification. Here’s how the prep went: I was already working closely with AI infrastructure components, but while prepping for this cert… The AI Infra and Operations fundamentals training helped me step back and c…
+4. [Mar 18, 2026 — 84 comments, 3724 rx](https://www.linkedin.com/feed/update/urn:li:activity:7435738152641810432)
+   - Every engineer has that one server where the home directory looks like this.. 🫠 Everything looks perfectly organized. Until one day it suddenly doesn't. Not traffic spikes. Not Kubernetes issues. Not broken deployments. Just these words: "Disk space: 100% full." And suddenly you can't event login! A…
+5. [Mar 18, 2026 — 83 comments, 1098 rx](https://www.linkedin.com/feed/update/urn:li:activity:7431738366301335552)
+   - Happy to share that I’ve cleared the NVIDIA AI Operations Professional certification 🎉 The Associate certification I completed a few weeks ago helped build a strong mental model of the AI infrastructure stack. The Professional, however, shifted the perspective. It wasn’t just about understanding com…
 
 **One-line positioning (from corpus, not flattery):** Employer badge moments + large giveaways; NVIDIA join post is a category beacon.
 
@@ -226,76 +214,76 @@ This report is **machine-generated** from bulk caption exports so every creator 
 ### 4.8 Pritesh Jagani (Yudi J / UDJ) (`Yudi J.md`)
 
 - **Profile:** https://www.linkedin.com/in/priteshjagani
-- **Medians:** 43 reactions · 2 comments · 0 reposts
-- **Heuristic topics:** creator_business **224**, jobs_interviews **178**, visa_immigration **136**, money_salary **60**, ai_ml **50**, career_story **49**, data_analytics **10**
-- **Heuristic brand mentions:** Manifest Law **74**, Google **15**, Amazon / AWS **11**, OpenAI **11**, Meta **4**, Perplexity **3**, Microsoft **3**, Replit **2**, Claude **2**, Fireworks AI **1**
-- **Distinctive vs all peers:** **disclaimer** (3533721.18), **licensed** (2327084.68), **construed** (1809954.75), **purdue** (1077354.02), **appointment** (775694.89), **purposes** (146.03), **filing** (136.54), **discussed** (128.96), **accelerator** (78.39), **therefore** (72.07), **attorney** (55.81), **percent** (53.1), **authority** (49.31), **provided** (42.67)
+- **Medians:** 72 reactions · 3 comments · 0 reposts
+- **Heuristic topics:** creator_business **55**, visa_immigration **46**, jobs_interviews **40**, money_salary **20**, ai_ml **14**, career_story **10**, data_analytics **3**
+- **Heuristic brand mentions:** Manifest Law **28**, Google **4**, Amazon / AWS **3**, Replit **1**, OpenAI **1**, Claude **1**
+- **Distinctive vs all peers:** **disclaimer** (3703176.19), **travel** (3418316.48), **bulletin** (2136447.8), **filing** (173.02), **accelerator** (83.72), **purposes** (66.98), **dates** (47.44), **health** (44.65), **attorney** (42.42), **hunting** (39.07), **wednesday** (39.07), **situation** (39.07), **offers** (33.49), **verify** (27.91)
 
 **Five highest-comment posts:**
 
-1. [Dec 15, 2025 — 232 comments, 157 rx](https://www.linkedin.com/feed/update/urn:li:activity:7402013789837299712)
-   - These 50 DSA Patterns and 200+ problems helped software engineers in my community land offers at Amazon, Google, and Meta in the worst job market of 2025.. No matter which big tech company you apply to No matter what designation you have SDE-1, 2, 3 The process will always start with a DSA round, wh…
-2. [Feb 13, 2026 — 92 comments, 78 rx](https://www.linkedin.com/feed/update/urn:li:activity:7427486605864771586)
-   - The easy job market is gone. A few years ago, you could apply to 10–15 roles and expect interviews. Today? A single corporate job posting in the U.S. receives 200–300 applications. Only 4–6 candidates typically get interviewed. That’s less than a 3% chance if you apply blindly. So what works now? • …
-3. [Mar 15, 2026 — 89 comments, 1463 rx](https://www.linkedin.com/feed/update/urn:li:activity:7432121922118803456)
+1. [Mar 15, 2026 — 89 comments, 1463 rx](https://www.linkedin.com/feed/update/urn:li:activity:7432121922118803456)
    - I just broke up with California, after 11 years together. And this time, we are not getting back. Yes, a few weeks ago, I said goodbye to California forever, sold my house, packed up my entire last 11 years of life in boxes, and drove over 3,000 miles to the East Coast of the USA. 12 years ago, I ca…
-4. [Mar 15, 2026 — 88 comments, 4425 rx](https://www.linkedin.com/feed/update/urn:li:activity:7434656395502784515)
+2. [Mar 15, 2026 — 88 comments, 4425 rx](https://www.linkedin.com/feed/update/urn:li:activity:7434656395502784515)
    - 12 years ago, I was eating one-dollar tacos to save money as an international student. A few weeks ago, I moved into a 6 bedroom home in North Carolina, which costs $700k. The sheer size of the backyard and the area of this house is unbelievable. My wife, Kaitlyn, literally jumped like a kid doing r…
-5. [Dec 15, 2025 — 74 comments, 459 rx](https://www.linkedin.com/feed/update/urn:li:activity:7404188104821100545)
-   - A job seeker in my community wasted 6 weeks applying to the same jobs as everyone else. He spammed easy apply, and every job he would see on LinkedIn looked like a ghost job been there for ages. The first time I got to know about him, I gave him a way to find 20+ job listings daily instead of the da…
+3. [Mar 15, 2026 — 30 comments, 81 rx](https://www.linkedin.com/feed/update/urn:li:activity:7435096760970186752)
+   - International students often think the solution to job hunting is simple: Apply more. But the real problem is conversion rate. Cold applications today convert at roughly 0.5%–1%. Referrals convert at 10%–20%. That’s almost 10x higher. So instead of sending 500 random applications, try the 50 Job Str…
+4. [Mar 15, 2026 — 25 comments, 280 rx](https://www.linkedin.com/feed/update/urn:li:activity:7430385717769494528)
+   - The U.S. has quietly lost nearly half of its international students. Outside of COVID, this is the largest enrollment crash we’ve ever seen. • Overall drop: 40–50% • China: down 12% • India: down 44% • These two countries once made up almost half of all international students Why is this happening? …
+5. [Apr 7, 2026 — 23 comments, 656 rx](https://www.linkedin.com/feed/update/urn:li:activity:7445144891950776320)
+   - Oracle just laid off 18% of their global worforce ~ 30,000 people. Amazon laid off 16,000 people at the start of 2026 Atlassian also recently announced layoffs. It is truly a tough time for a lot of people, if you or someone you know has been impacted by layoffs, here's a list of resources to help: …
 
 ---
 
 ## 5. Pritesh vs each peer (three bullets each, data-backed)
 
 ### vs Aishwarya Srinivasan
-- **Baseline:** median reactions **43** (PJ) vs **200** (Aishwarya Srinivasan) over n=269 vs 324.
+- **Baseline:** median reactions **72** (PJ) vs **177** (Aishwarya Srinivasan) over n=72 vs 114.
 - **Topic center of mass:** Pritesh **creator_business** vs Aishwarya Srinivasan **ai_ml** (heuristic tags; not mutually exclusive).
-- **Share loop:** reposts/1k rx **22.0** (PJ) vs **35.8** (Aishwarya Srinivasan).
+- **Share loop:** reposts/1k rx **7.4** (PJ) vs **38.3** (Aishwarya Srinivasan).
 
 ### vs Amney Mounir
-- **Baseline:** median reactions **43** (PJ) vs **453** (Amney Mounir) over n=269 vs 275.
+- **Baseline:** median reactions **72** (PJ) vs **416** (Amney Mounir) over n=72 vs 191.
 - **Topic center of mass:** Pritesh **creator_business** vs Amney Mounir **data_analytics** (heuristic tags; not mutually exclusive).
-- **Share loop:** reposts/1k rx **22.0** (PJ) vs **77.2** (Amney Mounir).
+- **Share loop:** reposts/1k rx **7.4** (PJ) vs **83.4** (Amney Mounir).
 
 ### vs Ruchi Bhatia
-- **Baseline:** median reactions **43** (PJ) vs **599** (Ruchi Bhatia) over n=269 vs 47.
+- **Baseline:** median reactions **72** (PJ) vs **368** (Ruchi Bhatia) over n=72 vs 29.
 - **Topic center of mass:** Pritesh **creator_business** vs Ruchi Bhatia **ai_ml** (heuristic tags; not mutually exclusive).
-- **Share loop:** reposts/1k rx **22.0** (PJ) vs **2.3** (Ruchi Bhatia).
+- **Share loop:** reposts/1k rx **7.4** (PJ) vs **2.4** (Ruchi Bhatia).
 
 ### vs Sohan Sethi
-- **Baseline:** median reactions **43** (PJ) vs **144** (Sohan Sethi) over n=269 vs 163.
+- **Baseline:** median reactions **72** (PJ) vs **176** (Sohan Sethi) over n=72 vs 98.
 - **Topic center of mass:** Pritesh **creator_business** vs Sohan Sethi **creator_business** (heuristic tags; not mutually exclusive).
-- **Share loop:** reposts/1k rx **22.0** (PJ) vs **101.1** (Sohan Sethi).
+- **Share loop:** reposts/1k rx **7.4** (PJ) vs **111.7** (Sohan Sethi).
 
 ### vs Sundas Khalid
-- **Baseline:** median reactions **43** (PJ) vs **275** (Sundas Khalid) over n=269 vs 103.
+- **Baseline:** median reactions **72** (PJ) vs **240** (Sundas Khalid) over n=72 vs 66.
 - **Topic center of mass:** Pritesh **creator_business** vs Sundas Khalid **ai_ml** (heuristic tags; not mutually exclusive).
-- **Share loop:** reposts/1k rx **22.0** (PJ) vs **17.0** (Sundas Khalid).
+- **Share loop:** reposts/1k rx **7.4** (PJ) vs **13.3** (Sundas Khalid).
 
 ### vs Venkata Sai
-- **Baseline:** median reactions **43** (PJ) vs **283** (Venkata Sai) over n=269 vs 119.
-- **Topic center of mass:** Pritesh **creator_business** vs Venkata Sai **creator_business** (heuristic tags; not mutually exclusive).
-- **Share loop:** reposts/1k rx **22.0** (PJ) vs **80.8** (Venkata Sai).
+- **Baseline:** median reactions **72** (PJ) vs **0** (Venkata Sai) over n=72 vs 0.
+- **Topic center of mass:** Pritesh **creator_business** vs Venkata Sai **n/a** (heuristic tags; not mutually exclusive).
+- **Share loop:** reposts/1k rx **7.4** (PJ) vs **0.0** (Venkata Sai).
 
 ### vs Vishaka Sadhwani
-- **Baseline:** median reactions **43** (PJ) vs **806** (Vishaka Sadhwani) over n=269 vs 153.
+- **Baseline:** median reactions **72** (PJ) vs **846** (Vishaka Sadhwani) over n=72 vs 50.
 - **Topic center of mass:** Pritesh **creator_business** vs Vishaka Sadhwani **ai_ml** (heuristic tags; not mutually exclusive).
-- **Share loop:** reposts/1k rx **22.0** (PJ) vs **79.8** (Vishaka Sadhwani).
+- **Share loop:** reposts/1k rx **7.4** (PJ) vs **77.8** (Vishaka Sadhwani).
 
 ---
 
 ## 6. Topic counts per creator (heuristic, non-exclusive)
 
-- **Aishwarya Srinivasan:** ai_ml (274); creator_business (179); career_story (52)
-- **Amney Mounir:** data_analytics (147); creator_business (131); jobs_interviews (125)
-- **Ruchi Bhatia:** ai_ml (39); creator_business (21); jobs_interviews (15)
-- **Sohan Sethi:** creator_business (151); jobs_interviews (129); data_analytics (79)
-- **Sundas Khalid:** ai_ml (57); creator_business (45); jobs_interviews (25)
-- **Venkata Sai:** creator_business (88); jobs_interviews (77); data_analytics (72)
-- **Vishaka Sadhwani:** ai_ml (86); creator_business (52); career_story (30)
+- **Aishwarya Srinivasan:** ai_ml (92); creator_business (57); career_story (13)
+- **Amney Mounir:** data_analytics (92); creator_business (90); ai_ml (80)
+- **Ruchi Bhatia:** ai_ml (24); creator_business (15); jobs_interviews (11)
+- **Sohan Sethi:** creator_business (91); jobs_interviews (70); data_analytics (57)
+- **Sundas Khalid:** ai_ml (41); creator_business (37); data_analytics (14)
+- **Venkata Sai:** 
+- **Vishaka Sadhwani:** ai_ml (31); creator_business (14); jobs_interviews (11)
 
-- **Pritesh:** creator_business (224); jobs_interviews (178); visa_immigration (136); money_salary (60); ai_ml (50)
+- **Pritesh:** creator_business (55); visa_immigration (46); jobs_interviews (40); money_salary (20); ai_ml (14)
 
 ---
 
@@ -305,11 +293,11 @@ Sundas Khalid is **fully analyzed in §4.5** like every other peer; she is **not
 
 | # | Pattern owner | Pattern | Primary exemplar (highest comments in window) | Pritesh remix (original) |
 |---|---|---|---|---|
-| 1 | Aishwarya Srinivasan | Milestone / ecosystem pulse (funding, launch, conference) | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7389112259437846529) | Ship one **company- or community-scale** update with named partners. |
+| 1 | Aishwarya Srinivasan | Milestone / ecosystem pulse (funding, launch, conference) | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7423430710243348480) | Ship one **company- or community-scale** update with named partners. |
 | 2 | Amney Mounir | Contrarian DA take + repost gravity | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7444024008750239744) | Pick one contrarian **job-market mechanics** take for intl SWE; ask for reposts only if readers agree. |
-| 3 | Ruchi Bhatia | Credential ladder + named institutions | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7389171665210925056) | Stack **proof objects** (offer, project, talk) in one post — fewer adjectives, more receipts. |
-| 4 | Sohan Sethi | Save/repost cheatsheet frame | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7395453678259924992) | One **carousel** with a titled framework (interview system, not generic tips). |
-| 5 | Venkata Sai | Product narrative (“I built X that does Y in Z seconds”) | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7401251284219072513) | Show **one** workflow demo (tooling + screen) for a narrow ICP. |
+| 3 | Ruchi Bhatia | Credential ladder + named institutions | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7444979405732409345) | Stack **proof objects** (offer, project, talk) in one post — fewer adjectives, more receipts. |
+| 4 | Sohan Sethi | Save/repost cheatsheet frame | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7420117997316612098) | One **carousel** with a titled framework (interview system, not generic tips). |
+| 5 | Venkata Sai | Product narrative (“I built X that does Y in Z seconds”) | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7401251284219072513) *(outside 90d window — full export)* | Show **one** workflow demo (tooling + screen) for a narrow ICP. |
 | 6 | Vishaka Sadhwani | Comment-gated resource / employer badge energy | [exemplar](https://www.linkedin.com/feed/update/urn:li:activity:7421578486944870400) | One **free artifact** with comments as distribution; tie to your offer without spamming links. |
 
 ---
@@ -317,5 +305,6 @@ Sundas Khalid is **fully analyzed in §4.5** like every other peer; she is **not
 ## 8. Regenerate
 
 ```bash
-python3 audit_report.py --data /path/to/exports
+python3 audit_report.py --data /path/to/exports --days 90 --format md -o out/REPORT.md
+python3 audit_report.py --data /path/to/exports --days 90 --format html -o out/REPORT.html
 ```

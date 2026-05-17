@@ -7,15 +7,16 @@ Each peer gets the same section structure; six-post plan rotates across creators
 from __future__ import annotations
 
 import argparse
+import html
 import re
 from collections import Counter
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-ANCHOR = datetime(2026, 5, 17)
-WINDOW_START = datetime(2025, 11, 17)
-WINDOW_END = ANCHOR
+# Default window end (aligned with bulk export dates in repo). Overridden by configure_window().
+WINDOW_ANCHOR = datetime(2026, 5, 17, 23, 59, 59)
+WINDOW_DAYS = 90
 
 POST_BLOCK = re.compile(
     r"--- Post (?P<num>\d+) ---\s*\n"
@@ -146,12 +147,6 @@ class Post:
     body: str
 
     @property
-    def in_window(self) -> bool:
-        if self.date is None:
-            return False
-        return WINDOW_START <= self.date <= WINDOW_END
-
-    @property
     def hook(self) -> str:
         t = " ".join(self.body.split())
         return t[:300] + ("…" if len(t) > 300 else "")
@@ -159,6 +154,28 @@ class Post:
     @property
     def len_chars(self) -> int:
         return len(self.body.strip())
+
+
+def configure_window(days: int, anchor: datetime) -> None:
+    """Set rolling window [anchor - days, anchor] inclusive by calendar date."""
+    global WINDOW_DAYS, WINDOW_ANCHOR
+    WINDOW_DAYS = max(1, int(days))
+    WINDOW_ANCHOR = anchor
+
+
+def window_start_end() -> tuple[datetime, datetime]:
+    start = (WINDOW_ANCHOR - timedelta(days=WINDOW_DAYS)).replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
+    end = WINDOW_ANCHOR
+    return start, end
+
+
+def in_window(p: Post) -> bool:
+    if p.date is None:
+        return False
+    ws, we = window_start_end()
+    return ws.date() <= p.date.date() <= we.date()
 
 
 def parse_file(path: Path) -> tuple[list[Post], dict]:
@@ -217,7 +234,27 @@ def median(vals: list[int]) -> float:
 
 def summarize(xs: list[Post]) -> dict:
     if not xs:
-        return {"n": 0}
+        return {
+            "n": 0,
+            "median_reactions": 0.0,
+            "median_comments": 0.0,
+            "median_reposts": 0.0,
+            "median_score": 0.0,
+            "mean_reactions": 0.0,
+            "mean_comments": 0.0,
+            "mean_reposts": 0.0,
+            "median_body_chars": 0.0,
+            "mean_body_chars": 0.0,
+            "comments_per_1k_rx": 0.0,
+            "reposts_per_1k_rx": 0.0,
+            "share_rx_ge_500": 0.0,
+            "share_rx_ge_1000": 0.0,
+            "max_reactions": 0,
+            "max_comments": 0,
+            "media_mix": {},
+            "topic_posts": {},
+            "brand_mentions_posts": {},
+        }
     rx = [p.reactions for p in xs]
     cm = [p.comments for p in xs]
     rp = [p.reposts for p in xs]
@@ -244,6 +281,10 @@ def summarize(xs: list[Post]) -> dict:
         "mean_body_chars": sum(lens) / len(lens),
         "comments_per_1k_rx": (sum(cm) / sum(rx) * 1000) if sum(rx) else 0,
         "reposts_per_1k_rx": (sum(rp) / sum(rx) * 1000) if sum(rx) else 0,
+        "share_rx_ge_500": sum(1 for x in rx if x >= 500) / len(rx),
+        "share_rx_ge_1000": sum(1 for x in rx if x >= 1000) / len(rx),
+        "max_reactions": max(rx),
+        "max_comments": max(cm),
         "media_mix": dict(media.most_common()),
         "topic_posts": dict(topics.most_common()),
         "brand_mentions_posts": dict(brands.most_common()),
@@ -251,7 +292,7 @@ def summarize(xs: list[Post]) -> dict:
 
 
 def window_posts(posts: list[Post]) -> list[Post]:
-    return [p for p in posts if p.in_window]
+    return [p for p in posts if in_window(p)]
 
 
 def top_by(posts: list[Post], key: str, k: int) -> list[Post]:
@@ -274,6 +315,40 @@ def top_by(posts: list[Post], key: str, k: int) -> list[Post]:
         if len(out) >= k:
             break
     return out
+
+
+def top_by_global(posts: list[Post], key: str, k: int) -> list[Post]:
+    """Same as top_by but across all exported posts (ignores date window)."""
+    xs = list(posts)
+    if key == "comments":
+        xs.sort(key=lambda p: (p.comments, p.score), reverse=True)
+    elif key == "reposts":
+        xs.sort(key=lambda p: (p.reposts, p.score), reverse=True)
+    elif key == "score":
+        xs.sort(key=lambda p: (p.score, p.comments), reverse=True)
+    else:
+        raise ValueError(key)
+    out: list[Post] = []
+    seen: set[str] = set()
+    for p in xs:
+        if p.url in seen:
+            continue
+        seen.add(p.url)
+        out.append(p)
+        if len(out) >= k:
+            break
+    return out
+
+
+def first_exemplar_post(posts: list[Post]) -> tuple[Post | None, str]:
+    """Best comment post in-window, else best outside window (full export)."""
+    w = top_by(posts, "comments", 1)
+    if w:
+        return w[0], "in-window"
+    g = top_by_global(posts, "comments", 1)
+    if g:
+        return g[0], "fallback-full-export"
+    return None, "none"
 
 
 def word_freq_and_docfreq(
@@ -362,7 +437,9 @@ def build_report(data_dir: Path) -> str:
     L("# Pritesh Jagani (Yudi J / UDJ) — multi-creator LinkedIn audit")
     L("")
     L("This report is **machine-generated** from bulk caption exports so every creator is scored with the **same rubric**. ")
-    L("**Time window:** `2025-11-17`–`2026-05-17` (inclusive), anchored to export dates in May 2026.")
+    L(
+        f"**Time window:** last **{WINDOW_DAYS}** days — `{window_start_end()[0].date()}` through `{window_start_end()[1].date()}` (inclusive by post date)."
+    )
     L("")
     L("---")
     L("")
@@ -572,8 +649,11 @@ def build_report(data_dir: Path) -> str:
         ("Vishaka.md", "Comment-gated resource / employer badge energy", "One **free artifact** with comments as distribution; tie to your offer without spamming links."),
     ]
     for i, (fn, pat, remix) in enumerate(patterns, 1):
-        p0 = top_by(peer_by[fn], "comments", 1)[0]
-        rows6.append([str(i), display_for(fn), pat, f"[exemplar]({p0.url})", remix])
+        p0, src = first_exemplar_post(peer_by[fn])
+        ex = f"[exemplar]({p0.url})" if p0 else "—"
+        if p0 and src != "in-window":
+            ex += " *(outside 90d window — full export)*"
+        rows6.append([str(i), display_for(fn), pat, ex, remix])
 
     L(
         md_table(
@@ -587,7 +667,8 @@ def build_report(data_dir: Path) -> str:
     L("## 8. Regenerate")
     L("")
     L("```bash")
-    L("python3 audit_report.py --data /path/to/exports")
+    L("python3 audit_report.py --data /path/to/exports --days 90 --format md -o out/REPORT.md")
+    L("python3 audit_report.py --data /path/to/exports --days 90 --format html -o out/REPORT.html")
     L("```")
     L("")
     return "\n".join(lines)
@@ -642,8 +723,419 @@ def _three_bullets_compare(
     return "\n".join(lines)
 
 
+def _he(x: object) -> str:
+    return html.escape(str(x), quote=True)
+
+
+def _table(headers: list[str], rows: list[list[object]], table_class: str = "data") -> str:
+    th = "".join(f"<th>{_he(h)}</th>" for h in headers)
+    body = []
+    for row in rows:
+        cells = []
+        for c in row:
+            if isinstance(c, str) and c.strip().startswith("<"):
+                cells.append(f"<td>{c}</td>")
+            else:
+                cells.append(f"<td>{_he(c)}</td>")
+        body.append("<tr>" + "".join(cells) + "</tr>")
+    return f'<table class="{table_class}"><thead><tr>{th}</tr></thead><tbody>{"".join(body)}</tbody></table>'
+
+
+def _link(url: str, label: str = "Open post") -> str:
+    u = _he(url)
+    return f'<a href="{u}" target="_blank" rel="noopener noreferrer">{_he(label)}</a>'
+
+
+def _topic_keys() -> list[str]:
+    return [name for name, _ in TOPIC_PATTERNS]
+
+
+def _brand_columns(peer_by: dict, metas: dict, pritesh: list[Post]) -> list[str]:
+    totals: Counter[str] = Counter()
+    for fn, _ in PEER_FILES:
+        sm = summarize(window_posts(peer_by[fn]))
+        for k, v in sm.get("brand_mentions_posts", {}).items():
+            totals[k] += v
+    sm = summarize(window_posts(pritesh))
+    for k, v in sm.get("brand_mentions_posts", {}).items():
+        totals[k] += v
+    return [b for b, _ in totals.most_common(14)]
+
+
+def build_html_report(data_dir: Path) -> str:
+    peer_by, metas, pritesh = load_all(data_dir)
+    pj_w = window_posts(pritesh)
+    peers_w = window_posts([p for posts in peer_by.values() for p in posts])
+    ws, we = window_start_end()
+    agg = summarize(peers_w)
+    sm_p = summarize(pj_w)
+
+    topic_cols = _topic_keys()
+    brand_cols = _brand_columns(peer_by, metas, pritesh)
+
+    def creator_metric_row(label: str, sm: dict) -> list[object]:
+        mm = sm.get("media_mix") or {}
+        mix = ", ".join(f"{k} {v}" for k, v in list(mm.items())[:5]) or "—"
+        return [
+            label,
+            sm["n"],
+            f"{sm['median_reactions']:.0f}",
+            f"{sm['mean_reactions']:.1f}",
+            f"{100 * sm['share_rx_ge_500']:.1f}%",
+            f"{100 * sm['share_rx_ge_1000']:.1f}%",
+            f"{sm['median_comments']:.0f}",
+            f"{sm['reposts_per_1k_rx']:.1f}",
+            f"{sm['comments_per_1k_rx']:.1f}",
+            sm["max_reactions"],
+            sm["max_comments"],
+            mix,
+        ]
+
+    cohort_headers = [
+        "Creator",
+        "Posts (n)",
+        "Med. rx",
+        "Mean rx",
+        "≥500 rx",
+        "≥1k rx",
+        "Med. cm",
+        "Rp/1k rx",
+        "Cm/1k rx",
+        "Max rx",
+        "Max cm",
+        "Media mix",
+    ]
+    cohort_rows = []
+    for fn, display in PEER_FILES:
+        sm = summarize(window_posts(peer_by[fn]))
+        cohort_rows.append(creator_metric_row(display, sm))
+    cohort_rows.append(creator_metric_row(PRITESH_NAME, sm_p))
+
+    topic_header = ["Creator"] + topic_cols
+    topic_rows: list[list[object]] = []
+    for fn, display in PEER_FILES:
+        sm = summarize(window_posts(peer_by[fn]))
+        tp = sm.get("topic_posts", {})
+        topic_rows.append([display] + [tp.get(t, 0) for t in topic_cols])
+    tp = sm_p.get("topic_posts", {})
+    topic_rows.append([PRITESH_NAME] + [tp.get(t, 0) for t in topic_cols])
+
+    brand_header = ["Creator"] + brand_cols
+    brand_rows: list[list[object]] = []
+    for fn, display in PEER_FILES:
+        sm = summarize(window_posts(peer_by[fn]))
+        bp = sm.get("brand_mentions_posts", {})
+        brand_rows.append([display] + [bp.get(b, 0) for b in brand_cols])
+    bp = sm_p.get("brand_mentions_posts", {})
+    brand_rows.append([PRITESH_NAME] + [bp.get(b, 0) for b in brand_cols])
+
+    def peer_compare_rows() -> list[list[object]]:
+        out = []
+        for fn, display in PEER_FILES:
+            sm = summarize(window_posts(peer_by[fn]))
+            out.append(
+                [
+                    display,
+                    f"{sm_p['median_reactions']:.0f} vs {sm['median_reactions']:.0f}",
+                    f"{sm_p['median_comments']:.0f} vs {sm['median_comments']:.0f}",
+                    f"{100 * sm_p['share_rx_ge_500']:.1f}% vs {100 * sm['share_rx_ge_500']:.1f}%",
+                    f"{sm_p['reposts_per_1k_rx']:.1f} vs {sm['reposts_per_1k_rx']:.1f}",
+                ]
+            )
+        return out
+
+    sections: list[str] = []
+
+    def sec(sid: str, title: str, inner: str) -> None:
+        sections.append(f'<section id="{_he(sid)}"><h2>{_he(title)}</h2>{inner}</section>')
+
+    sec(
+        "overview",
+        "Executive snapshot (last " + str(WINDOW_DAYS) + " days)",
+        "<p>Aggregates below are computed from the same export files for every creator. "
+        "Heuristic topics and brands can overlap within a single post.</p>"
+        + _table(
+            ["Metric", "Peers (7)", PRITESH_NAME.split("(")[0].strip()],
+            [
+                ["Posts in window", agg["n"], sm_p["n"]],
+                ["Median reactions", f"{agg['median_reactions']:.0f}", f"{sm_p['median_reactions']:.0f}"],
+                ["Median comments", f"{agg['median_comments']:.0f}", f"{sm_p['median_comments']:.0f}"],
+                ["Reposts / 1k rx", f"{agg['reposts_per_1k_rx']:.1f}", f"{sm_p['reposts_per_1k_rx']:.1f}"],
+                ["Comments / 1k rx", f"{agg['comments_per_1k_rx']:.1f}", f"{sm_p['comments_per_1k_rx']:.1f}"],
+                ["Share of posts with ≥500 rx", f"{100 * agg['share_rx_ge_500']:.1f}%", f"{100 * sm_p['share_rx_ge_500']:.1f}%"],
+                ["Share of posts with ≥1000 rx", f"{100 * agg['share_rx_ge_1000']:.1f}%", f"{100 * sm_p['share_rx_ge_1000']:.1f}%"],
+            ],
+        ),
+    )
+
+    roster = []
+    for fn, display in PEER_FILES:
+        page = metas[fn].get("page", "")
+        n = len(window_posts(peer_by[fn]))
+        roster.append(
+            [
+                display,
+                _link(page, page.replace("https://", "")) if page else "—",
+                n,
+                metas[fn].get("exported", "—"),
+                fn,
+            ]
+        )
+    page = metas[PRITESH_FILE].get("page", "")
+    roster.append(
+        [
+            PRITESH_NAME,
+            _link(page, page.replace("https://", "")) if page else "—",
+            len(pj_w),
+            metas[PRITESH_FILE].get("exported", "—"),
+            PRITESH_FILE,
+        ]
+    )
+    sec(
+        "roster",
+        "Creator roster & source files",
+        _table(["Display name", "Profile URL", "Posts in window", "Export date", "File"], roster),
+    )
+
+    sec(
+        "cohort-matrix",
+        "Full metrics matrix (click-through column)",
+        "<p>Compare baseline strength and “viral tail” (share of posts crossing reaction thresholds).</p>"
+        + _table(cohort_headers, cohort_rows),
+    )
+
+    sec(
+        "topics",
+        "Heuristic topic counts by creator",
+        "<p>Columns are regex-based tags; one post can increment multiple columns.</p>"
+        + _table(topic_header, topic_rows),
+    )
+
+    sec(
+        "brands",
+        "Heuristic brand / vendor mentions (top signals across corpus)",
+        "<p>Columns are the 14 most frequent brand keywords across all peers + Pritesh in this window. "
+        "“Manifest” may include non-law uses; interpret in context.</p>"
+        + _table(brand_header, brand_rows),
+    )
+
+    sec(
+        "pritesh-vs-peers",
+        "Pritesh vs each peer (same window)",
+        _table(
+            ["Peer", "Median rx (PJ vs peer)", "Median cm", "Share ≥500 rx", "Reposts/1k rx"],
+            peer_compare_rows(),
+        ),
+    )
+
+    patterns = [
+        ("AIshwaraya.md", "Milestone / ecosystem pulse", "One company/community milestone with named partners."),
+        ("Amney.md", "Contrarian DA + repost gravity", "Contrarian job-market mechanic for intl SWE + repost ask."),
+        ("Ruchi Bhatia.md", "Credential ladder", "Proof-stack post: offers, talks, institutions."),
+        ("Sohan Sethi.md", "Cheatsheet / save frame", "One titled carousel for interview system."),
+        ("Venkata.md", "Product demo narrative", "One workflow demo for narrow ICP."),
+        ("Vishaka.md", "Comment-gated resource", "Free artifact; comments as distribution."),
+    ]
+    six_rows = []
+    for i, (fn, pat, remix) in enumerate(patterns, 1):
+        p0, src = first_exemplar_post(peer_by[fn])
+        if p0 is None:
+            six_rows.append([i, display_for(fn), pat, "—", remix])
+            continue
+        lbl = "LinkedIn post" if src == "in-window" else "LinkedIn (best in full export — outside 90d)"
+        six_rows.append([i, display_for(fn), pat, _link(p0.url, lbl), remix])
+    sec(
+        "six-posts",
+        "Six-post sprint (six different exemplar owners)",
+        "<p>Sundas Khalid is analyzed in her own section below; she is not duplicated here so the grid stays diverse.</p>"
+        + _table(["#", "Pattern owner", "Pattern", "Top-comment exemplar", "Pritesh remix"], six_rows),
+    )
+
+    for idx, (fn, display) in enumerate(PEER_FILES, start=1):
+        posts = peer_by[fn]
+        w = window_posts(posts)
+        others = [p for p in peers_w if p.file != fn]
+        dist = distinctive_words(w, others)
+        sm = summarize(w)
+        dist_txt = ", ".join(f"{w} ({lift})" for w, lift in dist[:10]) if dist else "—"
+        top_posts = top_by(posts, "comments", 15)
+        note = ""
+        if not top_posts:
+            note = "<p class='warn'><strong>Note:</strong> No posts dated inside the 90-day window for this account in the export. "
+            note += "The table below uses the <strong>full export</strong> ranked by comments.</p>"
+            top_posts = top_by_global(posts, "comments", 15)
+        pr = []
+        for rank, p in enumerate(top_posts, 1):
+            pr.append(
+                [
+                    rank,
+                    p.date_raw,
+                    p.reactions,
+                    p.comments,
+                    p.reposts,
+                    p.score,
+                    p.media,
+                    _link(p.url, "View"),
+                    _he(p.hook[:420]),
+                ]
+            )
+        inner = (
+            note
+            + f"<p><strong>Profile:</strong> {_link(metas[fn]['page'], metas[fn]['page']) if metas[fn].get('page') else '—'}</p>"
+            f"<p><strong>Distinctive vocabulary</strong> (lift vs other peers): {_he(dist_txt)}</p>"
+            + _table(
+                ["Metric", "Value"],
+                [
+                    ["Posts (n)", sm["n"]],
+                    ["Median reactions", f"{sm['median_reactions']:.0f}"],
+                    ["Median comments", f"{sm['median_comments']:.0f}"],
+                    ["Median reposts", f"{sm['median_reposts']:.0f}"],
+                    ["Mean reactions", f"{sm['mean_reactions']:.1f}"],
+                    ["Mean comments", f"{sm['mean_comments']:.1f}"],
+                    ["Reposts / 1k rx", f"{sm['reposts_per_1k_rx']:.1f}"],
+                    ["Comments / 1k rx", f"{sm['comments_per_1k_rx']:.1f}"],
+                    ["Posts ≥500 rx", f"{100 * sm['share_rx_ge_500']:.1f}%"],
+                    ["Posts ≥1000 rx", f"{100 * sm['share_rx_ge_1000']:.1f}%"],
+                    ["Positioning read", _one_line_positioning(fn, sm, dist)],
+                ],
+                "kv",
+            )
+            + "<h3>Top posts by comments (deduped URLs)</h3>"
+            + _table(
+                ["#", "Date", "Rx", "Cm", "Rp", "Score", "Media", "Link", "Hook (preview)"],
+                pr,
+            )
+        )
+        sid = f"creator-{idx}-{fn.replace('.', '').replace(' ', '-').lower()}"
+        sec(sid, f"{idx}. {display}", inner)
+
+    # Pritesh section
+    others_all = peers_w
+    dist_p = distinctive_words(pj_w, others_all)
+    dist_txt_p = ", ".join(f"{w} ({lift})" for w, lift in dist_p[:12]) if dist_p else "—"
+    top_p = top_by(pritesh, "comments", 15)
+    note_p = ""
+    if not top_p:
+        note_p = "<p class='warn'><strong>Note:</strong> No Pritesh posts in the 90-day window; showing full-export leaders.</p>"
+        top_p = top_by_global(pritesh, "comments", 15)
+    pr_rows = []
+    for rank, p in enumerate(top_p, 1):
+        pr_rows.append(
+            [
+                rank,
+                p.date_raw,
+                p.reactions,
+                p.comments,
+                p.reposts,
+                p.score,
+                p.media,
+                _link(p.url, "View"),
+                _he(p.hook[:420]),
+            ]
+        )
+    sec(
+        "creator-pritesh",
+        f"{len(PEER_FILES) + 1}. {PRITESH_NAME}",
+        (
+            note_p
+            + f"<p><strong>Profile:</strong> {_link(metas[PRITESH_FILE]['page'], metas[PRITESH_FILE]['page']) if metas[PRITESH_FILE].get('page') else '—'}</p>"
+            f"<p><strong>Distinctive vocabulary vs all peers:</strong> {_he(dist_txt_p)}</p>"
+            + _table(
+                ["Metric", "Value"],
+                [
+                    ["Posts (n)", sm_p["n"]],
+                    ["Median reactions", f"{sm_p['median_reactions']:.0f}"],
+                    ["Median comments", f"{sm_p['median_comments']:.0f}"],
+                    ["Median reposts", f"{sm_p['median_reposts']:.0f}"],
+                    ["Mean reactions", f"{sm_p['mean_reactions']:.1f}"],
+                    ["Mean comments", f"{sm_p['mean_comments']:.1f}"],
+                    ["Reposts / 1k rx", f"{sm_p['reposts_per_1k_rx']:.1f}"],
+                    ["Comments / 1k rx", f"{sm_p['comments_per_1k_rx']:.1f}"],
+                    ["Posts ≥500 rx", f"{100 * sm_p['share_rx_ge_500']:.1f}%"],
+                    ["Posts ≥1000 rx", f"{100 * sm_p['share_rx_ge_1000']:.1f}%"],
+                ],
+                "kv",
+            )
+            + "<h3>Top posts by comments</h3>"
+            + _table(["#", "Date", "Rx", "Cm", "Rp", "Score", "Media", "Link", "Hook (preview)"], pr_rows)
+        ),
+    )
+
+    nav_items = [
+        ("overview", "Overview"),
+        ("roster", "Roster"),
+        ("cohort-matrix", "Metrics matrix"),
+        ("topics", "Topics"),
+        ("brands", "Brands"),
+        ("pritesh-vs-peers", "PJ vs peers"),
+        ("six-posts", "Six-post plan"),
+    ]
+    for idx, (fn, display) in enumerate(PEER_FILES, start=1):
+        sid = f"creator-{idx}-{fn.replace('.', '').replace(' ', '-').lower()}"
+        nav_items.append((sid, display))
+    nav_items.append(("creator-pritesh", "Pritesh"))
+
+    nav = "<ul>" + "".join(f'<li><a href="#{_he(s)}">{_he(t)}</a></li>' for s, t in nav_items) + "</ul>"
+
+    css = """
+    :root { --bg:#0f1419; --card:#1a2332; --text:#e7ecf3; --muted:#9fb0c3; --accent:#5b9bd5; --border:#2d3a4d; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--text); margin:0; line-height:1.55; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 20px 80px; }
+    header { border-bottom: 1px solid var(--border); margin-bottom: 28px; padding-bottom: 20px; }
+    h1 { font-size: 1.75rem; margin: 0 0 8px; }
+    h2 { font-size: 1.25rem; margin-top: 36px; color: #cfe0f5; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    h3 { font-size: 1.05rem; margin-top: 20px; color: #b8cce0; }
+    p { color: var(--muted); max-width: 95ch; }
+    nav ul { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px 14px; }
+    nav a { color: var(--accent); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    table.data { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 16px 0 28px; background: var(--card); border-radius: 8px; overflow: hidden; }
+    table.data th, table.data td { border: 1px solid var(--border); padding: 8px 10px; vertical-align: top; }
+    table.data thead th { background: #243044; text-align: left; position: sticky; top: 0; z-index: 1; }
+    table.data tbody tr:nth-child(even) { background: #151d28; }
+    table.kv { max-width: 560px; }
+    a { color: var(--accent); }
+    code { background: #243044; padding: 2px 6px; border-radius: 4px; }
+    p.warn { color: #f0c674; }
+    """
+
+    gen = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+    doc = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UDJ / Pritesh — {WINDOW_DAYS}-day LinkedIn audit</title>
+<style>{css}</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Pritesh Jagani (Yudi J / UDJ) — LinkedIn multi-creator audit</h1>
+<p><strong>Window:</strong> last <code>{WINDOW_DAYS}</code> days, post dates <code>{ws.date()}</code> → <code>{we.date()}</code> inclusive.</p>
+<p><strong>Generated:</strong> {gen} · Source: bulk caption exports in <code>{_he(data_dir)}</code></p>
+<nav>{nav}</nav>
+</header>
+{"".join(sections)}
+<footer>
+<p>Engagement numbers are snapshots from the export files, not live LinkedIn. Topic/brand columns use heuristics. For questions about methodology, see <code>audit_report.py</code> in this repository.</p>
+</footer>
+</div>
+</body>
+</html>"""
+    return doc
+
+
+def parse_anchor_date(s: str) -> datetime:
+    y, m, d = s.strip().split("-")
+    return datetime(int(y), int(m), int(d), 23, 59, 59)
+
+
 def main() -> None:
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(
+        description="Generate LinkedIn multi-creator audit (Markdown or HTML).",
+    )
     ap.add_argument(
         "--data",
         type=Path,
@@ -654,13 +1146,48 @@ def main() -> None:
         "-o",
         "--output",
         type=Path,
-        default=Path(__file__).resolve().parent / "out" / "REPORT.md",
+        default=None,
+        help="Output file (.html or .md)",
+    )
+    ap.add_argument(
+        "--days",
+        type=int,
+        default=90,
+        help="Rolling window length in calendar days ending at --anchor",
+    )
+    ap.add_argument(
+        "--anchor",
+        type=str,
+        default="2026-05-17",
+        help="Window end date YYYY-MM-DD (matches export dates in this repo)",
+    )
+    ap.add_argument(
+        "--format",
+        choices=("html", "md"),
+        default="html",
+        help="Output format",
     )
     args = ap.parse_args()
-    text = build_report(args.data.resolve())
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(text, encoding="utf-8")
-    print("Wrote", args.output, "chars", len(text))
+    configure_window(args.days, parse_anchor_date(args.anchor))
+    data_dir = args.data.resolve()
+    out = args.output
+    if out is None:
+        out = Path(__file__).resolve().parent / "out" / (
+            "REPORT.html" if args.format == "html" else "REPORT.md"
+        )
+    if args.format == "html" and out.suffix.lower() != ".html":
+        out = out.with_suffix(".html")
+    if args.format == "md" and out.suffix.lower() not in (".md", ".markdown"):
+        out = out.with_suffix(".md")
+
+    if args.format == "html":
+        text = build_html_report(data_dir)
+    else:
+        text = build_report(data_dir)
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(text, encoding="utf-8")
+    print("Wrote", out, "chars", len(text))
 
 
 if __name__ == "__main__":
