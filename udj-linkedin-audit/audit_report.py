@@ -80,7 +80,8 @@ def is_plausible_english_token(w: str) -> bool:
     if len(w) < 4 or len(w) > 14:
         return False
     vowels = sum(1 for c in w if c in "aeiou")
-    if vowels < 1 or vowels / len(w) > 0.6:
+    vr = vowels / len(w)
+    if vr < 0.28 or vr > 0.62:
         return False
     streak = 0
     for c in w:
@@ -275,28 +276,42 @@ def top_by(posts: list[Post], key: str, k: int) -> list[Post]:
     return out
 
 
-def word_freq(posts: list[Post]) -> Counter[str]:
-    c: Counter[str] = Counter()
+def word_freq_and_docfreq(
+    posts: list[Post],
+) -> tuple[Counter[str], Counter[str]]:
+    """Term frequency and document frequency (posts containing token)."""
+    tf: Counter[str] = Counter()
+    df: Counter[str] = Counter()
     for p in posts:
+        seen: set[str] = set()
         for w in TOKEN_RE.findall(p.body.lower()):
-            if w in STOP or len(w) < 4 or not is_plausible_english_token(w):
+            if w in STOP or not is_plausible_english_token(w):
                 continue
-            c[w] += 1
-    return c
+            tf[w] += 1
+            seen.add(w)
+        for w in seen:
+            df[w] += 1
+    return tf, df
 
 
 def distinctive_words(
     self_posts: list[Post], other_peer_posts: list[Post], max_words: int = 14
 ) -> list[tuple[str, float]]:
-    sf = word_freq(self_posts)
-    of = word_freq(other_peer_posts)
+    sf, sdf = word_freq_and_docfreq(self_posts)
+    of, _odf = word_freq_and_docfreq(other_peer_posts)
     sum_s = sum(sf.values()) or 1
     sum_o = sum(of.values()) or 1
+    min_docs = 2 if len(self_posts) >= 12 else 1
     ranked: list[tuple[float, str]] = []
     for w, cnt in sf.items():
-        if cnt < max(5, min(12, len(self_posts) // 2)):
+        if sdf[w] < min_docs:
+            continue
+        if cnt < max(6, min(14, len(self_posts) // 3)):
             continue
         lift = (cnt / sum_s) / (of.get(w, 0) / sum_o + 1e-9)
+        # Short tokens with absurd lift are usually Unicode-mangled artifacts.
+        if len(w) <= 5 and lift > 800:
+            continue
         ranked.append((lift, w))
     ranked.sort(reverse=True)
     return [(w, round(lift, 2)) for lift, w in ranked[:max_words]]

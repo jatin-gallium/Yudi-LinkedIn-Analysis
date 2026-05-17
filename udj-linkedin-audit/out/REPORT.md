@@ -48,7 +48,7 @@ This report is **machine-generated** from bulk caption exports so every creator 
 - **Means:** 345.7 rx · 30.2 cm · reposts/1k rx **35.8**
 - **Heuristic topics (post counts, non-exclusive):** ai_ml **274**, creator_business **179**, career_story **52**, jobs_interviews **31**, money_salary **14**, data_analytics **12**, visa_immigration **5**
 - **Heuristic brand mentions:** OpenAI **31**, Fireworks AI **28**, Google **27**, Amazon / AWS **14**, NVIDIA **12**, Microsoft **11**, Anthropic **11**, Claude **10**, Meta **9**, Manifest Law **5**
-- **Vocabulary more concentrated here than other peers (lift × token):** **evals** (2116168.16), **fireworks** (1737152.96), **arvind** (1610814.57), **langgraph** (1516060.77), **narayanamurthy** (947537.98), **academy** (663276.59), **starcloud** (631691.99), **instruction** (505353.59), **natalie** (473768.99), **eval** (473768.99), **summarization** (442184.39), **retrieved** (442184.39), **substack** (92.01), **aishwarya** (62.17)
+- **Vocabulary more concentrated here than other peers (lift × token):** **fireworks** (2164502.16), **arvind** (2007083.83), **narayanamurthy** (1180637.54), **academy** (826446.28), **starcloud** (787091.7), **instruction** (629673.36), **natalie** (590318.77), **summarization** (550964.19), **retrieved** (550964.19), **aishwarya** (61.6), **retrieval** (54.21), **seats** (44.35), **srinivasan** (41.07), **langchain** (41.07)
 
 **Five highest-comment posts (deduped URLs):**
 
@@ -74,7 +74,7 @@ This report is **machine-generated** from bulk caption exports so every creator 
 - **Means:** 689.3 rx · 48.3 cm · reposts/1k rx **77.2**
 - **Heuristic topics (post counts, non-exclusive):** data_analytics **147**, creator_business **131**, jobs_interviews **125**, ai_ml **102**, career_story **40**, money_salary **16**, visa_immigration **4**
 - **Heuristic brand mentions:** Meta **22**, OpenAI **10**, Google **5**, Claude **3**, Microsoft **3**, Replit **2**, Amazon / AWS **2**, Manifest Law **2**
-- **Vocabulary more concentrated here than other peers (lift × token):** **amney** (17000377.79), **wanna** (982244.05), **scraping** (31.81), **everyday** (27.07), **behavioral** (24.03), **intro** (22.02), **insightful** (19.09), **joining** (17.62), **metric** (17.44), **definitely** (16.02), **influence** (15.73), **star** (14.68), **junior** (13.87), **round** (13.35)
+- **Vocabulary more concentrated here than other peers (lift × token):** **everyday** (27.61), **behavioral** (24.5), **intro** (22.46), **insightful** (19.46), **metric** (17.78), **definitely** (16.33), **influence** (16.04), **junior** (14.14), **round** (13.61), **count** (13.61), **recommend** (13.1), **daily** (12.34), **able** (10.89), **main** (10.29)
 
 **Five highest-comment posts (deduped URLs):**
 
@@ -100,7 +100,7 @@ This report is **machine-generated** from bulk caption exports so every creator 
 - **Means:** 872.1 rx · 15.0 cm · reposts/1k rx **2.3**
 - **Heuristic topics (post counts, non-exclusive):** ai_ml **39**, creator_business **21**, jobs_interviews **15**, career_story **12**, money_salary **3**, data_analytics **3**, visa_immigration **2**
 - **Heuristic brand mentions:** Amazon / AWS **12**, Google **6**, NVIDIA **5**, OpenAI **4**, Claude **4**, Anthropic **3**, Meta **2**, Microsoft **1**, Perplexity **1**
-- **Vocabulary more concentrated here than other peers (lift × token):** **domain** (13.82), **hashtag** (9.76), **amazon** (5.24), **shift** (5.16), **teams** (4.12), **last** (3.73), **career** (3.39), **thinking** (3.37), **decisions** (3.36), **content** (2.58), **agentic** (2.57), **roles** (2.56), **something** (2.47), **faster** (2.4)
+- **Vocabulary more concentrated here than other peers (lift × token):** **domain** (13.55), **hashtag** (9.57), **teams** (4.04), **career** (3.32), **decisions** (3.29), **content** (2.53), **roles** (2.51), **something** (2.42), **product** (2.25), **people** (2.08), **scale** (2.07), **building** (1.73), **model** (1.62), **models** (1.55)
 
 **Five highest-comment posts (deduped URLs):**
 
@@ -126,7 +126,7 @@ This report is **machine-generated** from bulk caption exports so every creator 
 - **Means:** 219.2 rx · 26.7 cm · reposts/1k rx **101.1**
 - **Heuristic topics (post counts, non-exclusive):** creator_business **151**, jobs_interviews **129**, data_analytics **79**, ai_ml **52**, career_story **42**, visa_immigration **41**, money_salary **35**
 - **Heuristic brand mentions:** Google **42**, Amazon / AWS **27**, Manifest Law **27**, Microsoft **12**, Claude **10**, OpenAI **5**, Meta **4**, NVIDIA **3**, Replit **2**
-- **Vocabulary more concentrated here than other peers (lift × token):** **gjuqmq** (3565950.92), **datalemur** (1610429.45), **wisedoc** (996932.52), **gqpambb** (728527.61), **mishra** (613496.93), **youtubers** (575153.37), **shashank** (575153.37), **lawyers** (536809.82), **avalon** (536809.82), **odds** (498466.26), **stratascratch** (122.85), **subscribers** (71.13), **luke** (71.12), **hackerrank** (71.12)
+- **Vocabulary more concentrated here than other peers (lift × token):** **datalemur** (2026049.2), **wisedoc** (1254220.94), **mishra** (771828.27), **youtubers** (723589.0), **lawyers** (675349.73), **avalon** (675349.73), **luke** (71.41), **hackerrank** (71.41), **barousse** (71.41), **bansal** (64.92), **ankit** (64.92), **visas** (61.67), **letters** (58.43), **employer** (58.43)
 
 **Five highest-comment posts (deduped URLs):**
 
@@ -152,7 +152,7 @@ This report is **machine-generated** from bulk caption exports so every creator 
 - **Means:** 443.2 rx · 38.2 cm · reposts/1k rx **17.0**
 - **Heuristic topics (post counts, non-exclusive):** ai_ml **57**, creator_business **45**, jobs_interviews **25**, career_story **22**, data_analytics **17**, money_salary **7**
 - **Heuristic brand mentions:** Google **11**, Claude **10**, OpenAI **6**, Amazon / AWS **4**, Replit **4**, Meta **1**, Anthropic **1**
-- **Vocabulary more concentrated here than other peers (lift × token):** **sundas** (3368549.99), **khalid** (2143622.72), **seattle** (135.18), **women** (33.58), **vibe** (25.18), **creator** (10.37), **event** (7.56), **person** (7.03), **room** (5.65), **coding** (5.3), **biggest** (5.17), **insightful** (4.79), **session** (4.77), **tech** (4.34)
+- **Vocabulary more concentrated here than other peers (lift × token):** **sundas** (4307812.81), **khalid** (2741335.42), **seattle** (137.99), **women** (34.27), **vibe** (25.71), **creator** (10.59), **event** (7.72), **person** (7.18), **room** (5.77), **coding** (5.41), **insightful** (4.89), **hashtag** (4.39), **learned** (4.2), **courses** (4.06)
 
 **Five highest-comment posts (deduped URLs):**
 
@@ -178,7 +178,7 @@ This report is **machine-generated** from bulk caption exports so every creator 
 - **Means:** 459.0 rx · 102.6 cm · reposts/1k rx **80.8**
 - **Heuristic topics (post counts, non-exclusive):** creator_business **88**, jobs_interviews **77**, data_analytics **72**, ai_ml **62**, career_story **24**, money_salary **13**, visa_immigration **8**
 - **Heuristic brand mentions:** Google **12**, Replit **10**, Amazon / AWS **7**, OpenAI **7**, Microsoft **6**, Meta **5**, Claude **5**, Manifest Law **3**, NVIDIA **2**, Anthropic **1**
-- **Vocabulary more concentrated here than other peers (lift × token):** **dufe** (5038658.67), **readers** (151.77), **gamma** (16.32), **seekers** (11.45), **beats** (11.45), **replit** (11.28), **scientists** (10.31), **science** (9.21), **waiting** (6.09), **newsletter** (5.44), **scientist** (5.24), **solutions** (4.87), **actual** (4.63), **recruiters** (4.58)
+- **Vocabulary more concentrated here than other peers (lift × token):** **readers** (151.67), **gamma** (16.31), **seekers** (11.45), **replit** (11.27), **science** (9.21), **waiting** (6.08), **newsletter** (5.44), **scientist** (5.23), **solutions** (4.86), **actual** (4.62), **recruiters** (4.58), **zero** (4.55), **ready** (4.13), **share** (3.89)
 
 **Five highest-comment posts (deduped URLs):**
 
@@ -204,7 +204,7 @@ This report is **machine-generated** from bulk caption exports so every creator 
 - **Means:** 954.2 rx · 56.2 cm · reposts/1k rx **79.8**
 - **Heuristic topics (post counts, non-exclusive):** ai_ml **86**, creator_business **52**, career_story **30**, jobs_interviews **26**, data_analytics **11**, money_salary **6**
 - **Heuristic brand mentions:** Amazon / AWS **22**, NVIDIA **18**, Google **11**, Microsoft **5**, OpenAI **2**, Replit **2**, Meta **1**
-- **Vocabulary more concentrated here than other peers (lift × token):** **kubernetes** (10275628.63), **terraform** (3747582.21), **containers** (2780464.22), **container** (1934235.98), **ingress** (1692456.48), **pods** (1511121.86), **helm** (1329787.23), **gitops** (1269342.36), **microservices** (1208897.49), **certs** (1208897.49), **rust** (1027562.86), **provisioning** (906673.11), **prometheus** (906673.11), **grafana** (785783.37)
+- **Vocabulary more concentrated here than other peers (lift × token):** **kubernetes** (12793497.89), **terraform** (4665863.94), **containers** (3461770.02), **container** (2408187.84), **ingress** (2107164.36), **gitops** (1580373.27), **microservices** (1505117.4), **provisioning** (1128838.05), **prometheus** (1128838.05), **devops** (324.79), **gateway** (179.96), **runtime** (106.85), **infra** (104.98), **aiops** (101.23)
 
 **Five highest-comment posts (deduped URLs):**
 
@@ -229,7 +229,7 @@ This report is **machine-generated** from bulk caption exports so every creator 
 - **Medians:** 43 reactions · 2 comments · 0 reposts
 - **Heuristic topics:** creator_business **224**, jobs_interviews **178**, visa_immigration **136**, money_salary **60**, ai_ml **50**, career_story **49**, data_analytics **10**
 - **Heuristic brand mentions:** Manifest Law **74**, Google **15**, Amazon / AWS **11**, OpenAI **11**, Meta **4**, Perplexity **3**, Microsoft **3**, Replit **2**, Claude **2**, Fireworks AI **1**
-- **Distinctive vs all peers:** **clip** (3268524.45), **disclaimer** (2763082.52), **licensed** (1819590.93), **atpa** (1617414.16), **construed** (1415237.39), **ehcr** (1044579.98), **yudi** (943491.59), **purdue** (842403.21), **ybabr** (673922.57), **ipwc** (606530.31), **appointment** (606530.31), **dear** (572834.18), **crobo** (572834.18), **texas** (539138.05)
+- **Distinctive vs all peers:** **disclaimer** (3533721.18), **licensed** (2327084.68), **construed** (1809954.75), **purdue** (1077354.02), **appointment** (775694.89), **purposes** (146.03), **filing** (136.54), **discussed** (128.96), **accelerator** (78.39), **therefore** (72.07), **attorney** (55.81), **percent** (53.1), **authority** (49.31), **provided** (42.67)
 
 **Five highest-comment posts:**
 
