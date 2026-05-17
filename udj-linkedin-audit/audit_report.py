@@ -1132,6 +1132,14 @@ def parse_anchor_date(s: str) -> datetime:
     return datetime(int(y), int(m), int(d), 23, 59, 59)
 
 
+def anchor_datetime(s: str) -> datetime:
+    """Window end: inclusive end of calendar day. Use host 'today' or YYYY-MM-DD."""
+    key = (s or "today").strip().lower()
+    if key in ("today", "now"):
+        return datetime.now().replace(hour=23, minute=59, second=59, microsecond=0)
+    return parse_anchor_date(s)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(
         description="Generate LinkedIn multi-creator audit (Markdown or HTML).",
@@ -1158,8 +1166,8 @@ def main() -> None:
     ap.add_argument(
         "--anchor",
         type=str,
-        default="2026-05-17",
-        help="Window end date YYYY-MM-DD (matches export dates in this repo)",
+        default="today",
+        help="Window end: YYYY-MM-DD or 'today' (local date; end-of-day inclusive)",
     )
     ap.add_argument(
         "--format",
@@ -1168,7 +1176,8 @@ def main() -> None:
         help="Output format",
     )
     args = ap.parse_args()
-    configure_window(args.days, parse_anchor_date(args.anchor))
+    configure_window(args.days, anchor_datetime(args.anchor))
+    ws, we = window_start_end()
     data_dir = args.data.resolve()
     out = args.output
     if out is None:
@@ -1187,7 +1196,8 @@ def main() -> None:
 
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(text, encoding="utf-8")
-    print("Wrote", out, "chars", len(text))
+    print("Wrote", out.resolve(), "chars", len(text))
+    print(f"Anchor (window end): {we.date()} | Window start: {ws.date()} | Days: {args.days}")
 
 
 if __name__ == "__main__":

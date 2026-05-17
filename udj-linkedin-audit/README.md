@@ -17,12 +17,29 @@ Deterministic report generator: reads **eight** LinkedIn bulk-export Markdown fi
 | `Venkata.md` | Venkata Sai |
 | `Vishaka.md` | Vishaka Sadhwani |
 
+## Where output is written
+
+By default (no `-o` flag), files are created **next to the script** under:
+
+| Format | Default path (relative to repo root) |
+|--------|--------------------------------------|
+| HTML (default) | `udj-linkedin-audit/out/REPORT.html` |
+| Markdown | `udj-linkedin-audit/out/REPORT.md` |
+
+Override with `-o /absolute/or/relative/path.html`.
+
+The script also prints the **resolved absolute path** and the **anchor date** when it finishes.
+
 ## Run
 
 From the directory that contains these `.md` files (e.g. monorepo root):
 
 ```bash
 # Detailed HTML (default): cohort matrix, topic & brand heatmaps, per-creator tables with LinkedIn links
+# --anchor today = window ends on this machine's local calendar date (e.g. 17 May)
+python3 udj-linkedin-audit/audit_report.py --data . --days 90 --anchor today --format html
+
+# Pin a specific end date instead of "today"
 python3 udj-linkedin-audit/audit_report.py --data . --days 90 --anchor 2026-05-17 --format html -o udj-linkedin-audit/out/REPORT.html
 
 # Markdown variant
@@ -42,7 +59,7 @@ open udj-linkedin-audit/out/REPORT.html       # macOS
 |------|---------|
 | `--data DIR` | Folder containing the eight exports |
 | `--days N` | Rolling window length (default **90**) |
-| `--anchor YYYY-MM-DD` | Window **end** date (default `2026-05-17`, aligned with repo exports) |
+| `--anchor YYYY-MM-DD` or `today` | Window **end** date (default **`today`** = local calendar date, e.g. 17 May) |
 | `--format html\|md` | Output type (default **html**) |
 | `-o PATH` | Output path (default `out/REPORT.html` or `out/REPORT.md`) |
 
